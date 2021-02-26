@@ -17,15 +17,15 @@
 	<!-- include google roboto font cdn link -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 	<!-- include the site bootstrap stylesheet -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="<?= 'assets/' ?>css/bootstrap.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="<?= 'assets/' ?>css/plugins.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="<?= 'assets/' ?>css/colors.css">
 	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="<?= 'assets/' ?>style.css">
 	<!-- include the site responsive stylesheet -->
-	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="<?= 'assets/' ?>css/responsive.css">
 </head>
 <body>
 	<!-- main container of all the page elements -->
@@ -59,7 +59,7 @@
 							<!-- logo -->
 							<div class="logo">
 								<a href="home.html">
-									<img src="images/logo-dark.png" alt="studylms">
+									<img src="<?= 'assets/' ?>images/logo-dark.png" alt="studylms">
 								</a>
 							</div>
 						</div>
@@ -424,7 +424,7 @@
 							<a href="#">
 								<div class="align">
 									<span class="icn-wrap">
-										<img src="images/icon05.svg" width="44" height="48" alt="image description">
+										<img src="<?= 'assets/' ?>images/icon05.svg" width="44" height="48" alt="image description">
 									</span>
 									<strong class="h h5 element-block text-uppercase">Bahasa</strong>
 								</div>
@@ -434,7 +434,7 @@
 							<a href="#">
 								<div class="align">
 									<span class="icn-wrap">
-										<img src="images/icon06.svg" width="51" height="42" alt="image description">
+										<img src="<?= 'assets/' ?>images/icon06.svg" width="51" height="42" alt="image description">
 									</span>
 									<strong class="h h5 element-block text-uppercase">Programming</strong>
 								</div>
@@ -444,7 +444,7 @@
 							<a href="#">
 								<div class="align">
 									<span class="icn-wrap">
-										<img src="images/icon09.svg" width="51" height="51" alt="image description">
+										<img src="<?= 'assets/' ?>images/icon09.svg" width="51" height="51" alt="image description">
 									</span>
 									<strong class="h h5 element-block text-uppercase">Web Development</strong>
 								</div>
@@ -503,7 +503,7 @@
 					<div class="row">
 						<div class="col-xs-12 col-sm-8 col">
 							<span class="icn-wrap alignleft element-block">
-								<img src="images/icon10.png" alt="image description">
+								<img src="<?= 'assets/' ?>images/icon10.png" alt="image description">
 							</span>
 							<div class="descr-wrap">
 								<h3>Pembelajar Baru Registasi Setiap Hari</h3>
@@ -691,7 +691,7 @@
 			<aside class="aside container">
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 col-md-3 col">
-						<div class="logo"><a href="home.html"><img src="images/logo.png" alt="studyLMS"></a></div>
+						<div class="logo"><a href="home.html"><img src="<?= 'assets/' ?>images/logo.png" alt="studyLMS"></a></div>
 						<p>learnWithMeee dibuat untuk meningkatkan kualitas pendidikan di Indonesia, khususnya pembelajaran yang penting untuk dipahami demi masa depan</p>
 						<a href="#" class="btn btn-default text-uppercase">Mulai Belajar Sekarang</a>
 					</div>
@@ -787,7 +787,7 @@
 		<span id="back-top" class="text-center fa fa-caret-up"></span>
 		<!-- loader of the page -->
 		<div id="loader" class="loader-holder">
-			<div class="block"><img src="images/svg/hearts.svg" width="100" alt="loader"></div>
+			<div class="block"><img src="<?= 'assets/' ?>images/svg/hearts.svg" width="100" alt="loader"></div>
 		</div>
 	</div>
 	<div class="popup-holder">
@@ -834,12 +834,12 @@
 		</div>
 	</div>
 	<!-- include jQuery -->
-	<script src="js/jquery.js"></script>
+	<script src="<?= 'assets/' ?>js/jquery.js"></script>
 	<!-- include jQuery -->
-	<script src="js/plugins.js"></script>
+	<script src="<?= 'assets/' ?>js/plugins.js"></script>
 	<!-- include jQuery -->
-	<script src="js/jquery.main.js"></script>
+	<script src="<?= 'assets/' ?>js/jquery.main.js"></script>
 	<!-- include jQuery -->
-	<script type="text/javascript" src="js/init.js"></script>
+	<script type="text/javascript" src="<?= 'assets/' ?>js/init.js"></script>
 </body>
 </html>

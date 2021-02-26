@@ -1152,7 +1152,7 @@
   }
   .steps-guide-holder:before {
     z-index: -1;
-    background: url(images/bg02.png) no-repeat;
+    background: url("../../assets/images/bg02.png") no-repeat;
     background-size: 100% auto;
     background-position: 0 0;
     display: block;
