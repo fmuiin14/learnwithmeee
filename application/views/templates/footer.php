@@ -102,57 +102,73 @@
 		<div id="loader" class="loader-holder">
 			<div class="block"><img src="<?= base_url('assets/') ?>images/svg/hearts.svg" width="100" alt="loader"></div>
 		</div>
-	</div>
-	<div class="popup-holder">
-		<div id="popup1" class="lightbox-demo">
-			<form action="#" class="user-log-form">
-				<h2>Login Form</h2>
-				<div class="form-group">
-					<input type="text" class="form-control element-block" placeholder="Username or email address *">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control element-block" placeholder="Password *">
-				</div>
-				<div class="btns-wrap">
-					<div class="wrap">
-						<label for="rem" class="custom-check-wrap fw-normal font-lato">
-							<input type="checkbox" id="rem" class="customFormReset">
-							<span class="fake-label element-block">Remember me</span>
-						</label>
-						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
-					</div>
-					<div class="wrap text-right">
-						<p>
-							<a href="#" class="forget-link">Lost your Password?</a>
-						</p>
-					</div>
-				</div>
-			</form>
 		</div>
-		<div id="popup2" class="lightbox-demo">
-			<form action="#" class="user-log-form">
-				<h2>Register Form</h2>
-				<div class="form-group">
-					<input type="email" class="form-control element-block" placeholder="Email address *">
+		<div class="popup-holder">
+			<div id="popup1" class="lightbox-demo">
+				<div class="user-log-form">
+					<a href="#gurulogin" class="btn btn-info lightbox">Login Sebagai Guru</a>
+					<a href="#siswalogin" class="btn btn-danger lightbox">Login Sebagai Siswa</a>
 				</div>
-				<div class="form-group">
-					<input type="password" class="form-control element-block" placeholder="Password *">
-				</div>
-				<div class="btns-wrap">
-					<div class="wrap">
-						<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Register</button>
+			</div>
+			<div id="gurulogin" class="lightbox-demo">
+				<form action="#" class="user-log-form">
+					<h2>Login Sebagai Guru</h2>
+					<div class="form-group">
+						<input type="text" class="form-control element-block" placeholder="Username or email address *">
 					</div>
-				</div>
-			</form>
+					<div class="form-group">
+						<input type="password" class="form-control element-block" placeholder="Password *">
+					</div>
+					<div class="btns-wrap">
+						<div class="wrap">
+							<label for="rem" class="custom-check-wrap fw-normal font-lato">
+								<input type="checkbox" id="rem" class="customFormReset">
+								<span class="fake-label element-block">Remember me</span>
+							</label>
+							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
+						</div>
+						<div class="wrap text-right">
+							<!-- <p>
+								<a href="#" class="forget-link">Lost your Password?</a>
+							</p> -->
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="siswalogin" class="lightbox-demo">
+				<form action="#" class="user-log-form">
+					<h2>Login Sebagai Siswa</h2>
+					<div class="form-group">
+						<input type="text" class="form-control element-block" placeholder="Username or email address *">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control element-block" placeholder="Password *">
+					</div>
+					<div class="btns-wrap">
+						<div class="wrap">
+							<label for="rem" class="custom-check-wrap fw-normal font-lato">
+								<input type="checkbox" id="rem" class="customFormReset">
+								<span class="fake-label element-block">Remember me</span>
+							</label>
+							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
+						</div>
+						<div class="wrap text-right">
+							<!-- <p>
+								<a href="#" class="forget-link">Lost your Password?</a>
+							</p> -->
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
-	</div>
-	<!-- include jQuery -->
-	<script src="<?= base_url('assets/') ?>js/jquery.js"></script>
-	<!-- include jQuery -->
-	<script src="<?= base_url('assets/') ?>js/plugins.js"></script>
-	<!-- include jQuery -->
-	<script src="<?= base_url('assets/') ?>js/jquery.main.js"></script>
-	<!-- include jQuery -->
-	<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
-</body>
-</html>
+		<!-- include jQuery -->
+		<script src="<?= base_url('assets/') ?>js/jquery.js"></script>
+		<!-- include jQuery -->
+		<script src="<?= base_url('assets/') ?>js/plugins.js"></script>
+		<!-- include jQuery -->
+		<script src="<?= base_url('assets/') ?>js/jquery.main.js"></script>
+		<!-- include jQuery -->
+		<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
+		</body>
+
+		</html>

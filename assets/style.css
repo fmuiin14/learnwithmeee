@@ -12490,7 +12490,7 @@ input:checked + .custom-radio-wrap:after {
 
 .lightbox-demo {
   padding: 5px;
-  width: 500px;
+  /* width: 500px; */
 }
 
 .lightbox-demo .user-log-form {
