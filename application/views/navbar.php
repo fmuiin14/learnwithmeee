@@ -26,8 +26,8 @@
 						<div class="col-xs-6 col-sm-3">
 							<!-- logo -->
 							<div class="logo">
-								<a href="#">
-									<img src="<?= base_url('assets/') ?>img/logo/logo.png" width="60" alt="studylms">
+								<a href="<?= site_url('home') ?>">
+									<img src="<?= base_url('assets/') ?>img/logo/logo.png" width="60" style="border-radius:30px;" alt="studylms">
 								</a>
 							</div>
 						</div>
@@ -47,19 +47,19 @@
 									<!-- main navigation -->
 									<ul class="nav navbar-nav navbar-right main-navigation text-uppercase font-lato">
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Beranda</a>
+											<a href="<?= site_url('home') ?>" class="dropdown-toggle">Beranda</a>
 										</li>
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tentang</a>
+											<a href="<?= site_url('home/about') ?>" class="dropdown-toggle">Tentang</a>
 										</li>
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pelajaran</a>
+											<a href="<?= site_url('home/course') ?>" class="dropdown-toggle" >Pelajaran</a>
 										</li>
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Kontak</a>
+											<a href="<?= site_url('home/contact') ?>" class="dropdown-toggle">Kontak</a>
 										</li>
 										<li class="dropdown">
-											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Masuk</a>
+											<a href="#" class="dropdown-toggle">Masuk</a>
 										</li>
 									</ul>
 								</div>
