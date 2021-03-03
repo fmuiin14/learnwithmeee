@@ -73,4 +73,10 @@ class Welcome extends CI_Controller
 			redirect(base_url('welcome/admin'));
 		}
 	}
+
+	public function logout() {
+		$this->session->unset_userdata('email');
+		$this->session->set_flashdata('success-logout', 'Berhasil');
+		redirect(base_url('welcome/admin'));
+	}
 }
