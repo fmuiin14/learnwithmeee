@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<!-- set the encoding of your site -->
 	<meta charset="utf-8">
@@ -26,4 +27,15 @@
 	<link rel="stylesheet" href="<?= base_url('assets/') ?>style.css">
 	<!-- include the site responsive stylesheet -->
 	<link rel="stylesheet" href="<?= base_url('assets/') ?>css/responsive.css">
+
+	<!-- for sweetalert -->
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/jquery.js"></script>
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/plugins.js"></script>
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/jquery.main.js"></script>
+	<!-- include jQuery -->
+	<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
+	<script src="<?= base_url('assets/js/') ?>sweetalert2.all.min.js"></script>
 </head>

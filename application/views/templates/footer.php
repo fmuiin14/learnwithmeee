@@ -128,9 +128,6 @@
 							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
 						</div>
 						<div class="wrap text-right">
-							<!-- <p>
-								<a href="#" class="forget-link">Lost your Password?</a>
-							</p> -->
 						</div>
 					</div>
 				</form>
@@ -153,22 +150,24 @@
 							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
 						</div>
 						<div class="wrap text-right">
-							<!-- <p>
-								<a href="#" class="forget-link">Lost your Password?</a>
-							</p> -->
 						</div>
 					</div>
 				</form>
 			</div>
 		</div>
-		<!-- include jQuery -->
-		<script src="<?= base_url('assets/') ?>js/jquery.js"></script>
-		<!-- include jQuery -->
-		<script src="<?= base_url('assets/') ?>js/plugins.js"></script>
-		<!-- include jQuery -->
-		<script src="<?= base_url('assets/') ?>js/jquery.main.js"></script>
-		<!-- include jQuery -->
-		<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
 		</body>
+
+		<!-- start sweetalert response -->
+		<?php if($this->session->flashdata('success-logout')): ?>
+		<script>
+			Swal.fire({
+				icon: 'success',
+				title: 'Kamu berhasil logout!',
+				text: 'Sampai jumpa lagi di pembelajaran selanjutnya!',
+				showConfirmButton: false,
+				timer: 2500
+			});
+		</script>
+		<?php endif; ?>
 
 		</html>
