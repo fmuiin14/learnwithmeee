@@ -45,8 +45,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown user-menu">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image">
-						<span class="d-none d-md-inline">Alexander Pierce</span>
+						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline"><?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); echo $data['user']['email']; ?></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 						<!-- User image -->
@@ -54,8 +53,10 @@
 							<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="img-circle elevation-2" alt="User Image">
 
 							<p>
-								Alexander Pierce - Web Developer
-								<small>Member since Nov. 2012</small>
+								<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); echo $data['user']['username']; ?>
+								<small>Member since 
+									<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); 
+									echo $data['user']['date_created']; ?></small>
 							</p>
 						</li>
 						<!-- Menu Footer-->
@@ -106,7 +107,7 @@
 							</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item">
-									<a href="pages/layout/top-nav.html" class="nav-link">
+									<a href="<?= base_url('admin/data_siswa') ?>" class="nav-link">
 										<i class="far fa-circle nav-icon"></i>
 										<p>Data Siswa</p>
 									</a>
