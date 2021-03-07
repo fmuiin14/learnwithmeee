@@ -27,6 +27,10 @@
 	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/summernote/summernote-bs4.css">
 	<!-- Google Font: Source Sans Pro -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+	<!-- DataTables -->
+	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -45,7 +49,8 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown user-menu">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline"><?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); echo $data['user']['email']; ?></span>
+						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline"><?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
+																																											echo $data['user']['email']; ?></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 						<!-- User image -->
@@ -53,9 +58,10 @@
 							<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="img-circle elevation-2" alt="User Image">
 
 							<p>
-								<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); echo $data['user']['username']; ?>
-								<small>Member since 
-									<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array(); 
+								<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
+								echo $data['user']['username']; ?>
+								<small>Member since
+									<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
 									echo $data['user']['date_created']; ?></small>
 							</p>
 						</li>
@@ -74,8 +80,7 @@
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
 			<a href="index3.html" class="brand-link">
-				<img src="<?= base_url('assets/') ?>img/logo/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-					style="opacity: .8">
+				<img src="<?= base_url('assets/') ?>img/logo/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
 				<span class="brand-text font-weight-light">learnWithMe</span>
 			</a>
 
@@ -85,8 +90,7 @@
 
 				<!-- Sidebar Menu -->
 				<nav class="mt-2">
-					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-						data-accordion="false">
+					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<li class="nav-header">DASHBOARD</li>
 						<li class="nav-item">
 							<a href="#" class="nav-link active">
