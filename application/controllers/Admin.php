@@ -41,4 +41,13 @@ class Admin extends CI_Controller
 		$this->load->view('admin/data_siswa', $data);
 		$this->load->view('admin_template/footer');
 	}
+
+	public function delete_siswa($id)
+	{
+		$this->load->model('m_siswa');
+		$where = array('id' => $id);
+		$this->m_siswa->delete_siswa($where, 'siswa');
+		$this->session->set_flashdata('user-delete', 'berhasil');
+		redirect('admin/data_siswa');
+	}
 }
