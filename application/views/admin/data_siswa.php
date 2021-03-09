@@ -24,7 +24,7 @@
 							<div class="card card-primary card-outline">
 								<div class="card-body text-center">
 									<p class="card-text">Kamu bisa menambah data siswa, dengan menekan tombol di bawah ini.</p>
-									<a href="#" class="btn btn-primary">Tambah Data Siswa</a>
+									<a href="<?= base_url('admin/tambah_data_siswa') ?>" class="btn btn-primary">Tambah Data Siswa</a>
 								</div>
 							</div>
 						</div>
@@ -51,12 +51,12 @@
 								</thead>
 
 								<tbody>
-									<?php
+									<?php $no = 1;
 									foreach ($user as $u) {
 									?>
 
 										<tr class="text-center">
-											<th scope="row"><?= $u->id_siswa ?></th>
+											<th scope="row"><?= $no++; ?></th>
 											<td><?= $u->nama ?></td>
 											<td><?= $u->email ?></td>
 											<td>
@@ -66,7 +66,7 @@
 											<td><a href="<?= site_url('admin/detail_siswa/' . $u->id_siswa) ?>" class="btn btn-success">Detail</a></td>
 											<td class="text-center">
 												<a href="<?= site_url('admin/update_siswa/') . $u->id_siswa ?>" class="btn btn-info">Update</a>
-												<a href="<?= site_url('admin/delete_siswa/') . $u->id_siswa ?>" class="btn btn-danger remove">Delete</a>
+												<a href="<?= site_url('admin/delete_siswa/') . $u->id_siswa ?>" class="btn btn-danger remove" onclick="return confirm('Are you sure want to Delete this ?')">Delete</a>
 											</td>
 
 										</tr>

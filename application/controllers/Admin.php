@@ -25,6 +25,8 @@ class Admin extends CI_Controller
 		$this->load->view('admin_template/footer');
 	}
 
+	// untuk siswa start
+
 	public function data_siswa()
 	{
 		$this->load->model('m_siswa');
@@ -45,9 +47,16 @@ class Admin extends CI_Controller
 	public function delete_siswa($id)
 	{
 		$this->load->model('m_siswa');
-		$where = array('id' => $id);
+		$where = array('id_siswa' => $id);
 		$this->m_siswa->delete_siswa($where, 'siswa');
 		$this->session->set_flashdata('user-delete', 'berhasil');
 		redirect('admin/data_siswa');
 	}
+
+	public function tambah_data_siswa() {
+		$this->load->view('admin_template/header');
+		$this->load->view('admin/tambah_data_siswa');
+		$this->load->view('admin_template/footer');
+	}
+	// untuk siswa end
 }
