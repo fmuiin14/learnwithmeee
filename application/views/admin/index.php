@@ -134,7 +134,7 @@
 										</div>
 										<div class="card-body">
 											<p class="card-text">Kamu bisa melihat dan manajemen data siswa, dengan menekan tombol di bawah ini.</p>
-											<a href="#" class="btn btn-primary">Data Siswa</a>
+											<a href="<?= base_url('admin/data_siswa') ?>" class="btn btn-primary">Data Siswa</a>
 										</div>
 									</div>
 								</div>

@@ -9,7 +9,7 @@ class Admin extends CI_Controller
 		parent::__construct();
 		$this->session->set_flashdata('not-login', 'Gagal!');
 		if (!$this->session->userdata('email')) {
-			redirect('Admin/login');
+			redirect('welcome/admin');
 		}
 	}
 
@@ -58,5 +58,19 @@ class Admin extends CI_Controller
 		$this->load->view('admin/tambah_data_siswa');
 		$this->load->view('admin_template/footer');
 	}
+
+	public function tambahDataAksi() {
+		$this->_rules();
+
+		if($this->form_validation->run() == FALSE) {
+			$this->tambah_data_siswa();
+		} else {
+			// store isian dari form disini
+		}
+
+
+	}
+
+
 	// untuk siswa end
 }
