@@ -41,10 +41,6 @@
 <script src="<?= base_url('assets/be/') ?>plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= base_url('assets/be/') ?>dist/js/adminlte.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="<?= base_url('assets/be/') ?>dist/js/pages/dashboard.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="<?= base_url('assets/be/') ?>dist/js/demo.js"></script>
 
 <!-- DataTables -->
 <script src="<?= base_url('assets/be/') ?>plugins/datatables/jquery.dataTables.min.js"></script>

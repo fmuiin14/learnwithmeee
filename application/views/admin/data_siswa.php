@@ -35,6 +35,7 @@
 			<!-- /.row -->
 			<div class="row">
 				<div class="col-md-12">
+				<?= $this->session->flashdata('pesan') ?>
 					<div class="bg-white p-4">
 						<div class="table-responsive">
 							<table id="nama-table" class="table align-items-center table-flush">
@@ -60,9 +61,9 @@
 											<td><?= $u->nama ?></td>
 											<td><?= $u->email ?></td>
 											<td>
-												<img height="20px" src="<?= base_url('assets/profile_picture/' . $u->image) ?>" alt="">
+												<img height="20px" src="<?= base_url('assets/photo/' . $u->image) ?>" alt="">
 											</td>
-											<td><?= $u->is_active ?></td>
+											<td><?= $u->is_active ? 'Aktif' : 'Tidak Aktif' ?></td>
 											<td><a href="<?= site_url('admin/detail_siswa/' . $u->id_siswa) ?>" class="btn btn-success">Detail</a></td>
 											<td class="text-center">
 												<a href="<?= site_url('admin/update_siswa/') . $u->id_siswa ?>" class="btn btn-info">Update</a>
