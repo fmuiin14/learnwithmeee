@@ -2,15 +2,14 @@
 
 class Login_model extends CI_Model {
 
-    // cek email dan passwd dosen
-    function auth_pengajar($username, $password) {
-        $query = $this->db->query("SELECT * FROM admin WHERE email='$username' AND password=MD5('$password') LIMIT 1");
-        return $query;
+    function validasi_username($username) {
+        $result = $this->db->query("SELECT * FROM users WHERE email='$username' LIMIT 1");
+        return $result;
     }
 
-    // cek email dan passwd siswa
-    public function auth_siswa($username, $password) {
-        $query = $this->db->query("SELECT * FROM siswa WHERE email='$username' AND password=MD5('$password') LIMIT 1");
+    function validasi_password($username, $password) {
+        $result = $this->db->query("SELECT * FROM users WHERE email='$username' AND password=MD5('$password') LIMIT 1");
+        return $result;
     }
 }
 
