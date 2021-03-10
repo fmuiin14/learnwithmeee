@@ -103,71 +103,61 @@
 			<div class="block"><img src="<?= base_url('assets/') ?>images/svg/hearts.svg" width="100" alt="loader"></div>
 		</div>
 		</div>
-		<div class="popup-holder">
-			<div id="popup1" class="lightbox-demo">
-				<div class="user-log-form">
-					<a href="#gurulogin" class="btn btn-info lightbox">Login Sebagai Guru</a>
-					<a href="#siswalogin" class="btn btn-danger lightbox">Login Sebagai Siswa</a>
-				</div>
-			</div>
-			<div id="gurulogin" class="lightbox-demo">
-				<form action="#" class="user-log-form">
-					<h2>Login Sebagai Guru</h2>
-					<div class="form-group">
-						<input type="text" class="form-control element-block" placeholder="Username or email address *">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control element-block" placeholder="Password *">
-					</div>
-					<div class="btns-wrap">
-						<div class="wrap">
-							<label for="rem" class="custom-check-wrap fw-normal font-lato">
-								<input type="checkbox" id="rem" class="customFormReset">
-								<span class="fake-label element-block">Remember me</span>
-							</label>
-							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
-						</div>
-						<div class="wrap text-right">
-						</div>
-					</div>
-				</form>
-			</div>
-			<div id="siswalogin" class="lightbox-demo">
-				<form action="#" class="user-log-form">
-					<h2>Login Sebagai Siswa</h2>
-					<div class="form-group">
-						<input type="text" class="form-control element-block" placeholder="Username or email address *">
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-control element-block" placeholder="Password *">
-					</div>
-					<div class="btns-wrap">
-						<div class="wrap">
-							<label for="rem" class="custom-check-wrap fw-normal font-lato">
-								<input type="checkbox" id="rem" class="customFormReset">
-								<span class="fake-label element-block">Remember me</span>
-							</label>
-							<button type="submit" class="btn btn-theme btn-warning fw-bold font-lato text-uppercase">Login</button>
-						</div>
-						<div class="wrap text-right">
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
 		</body>
 
 		<!-- start sweetalert response -->
-		<?php if($this->session->flashdata('success-logout')): ?>
-		<script>
-			Swal.fire({
-				icon: 'success',
-				title: 'Kamu berhasil logout!',
-				text: 'Sampai jumpa lagi di pembelajaran selanjutnya!',
-				showConfirmButton: false,
-				timer: 2500
-			});
-		</script>
+		<?php if ($this->session->flashdata('success-logout')) : ?>
+			<script>
+				Swal.fire({
+					icon: 'success',
+					title: 'Kamu berhasil logout !',
+					text: 'Sampai jumpa lagi di pembelajaran selanjutnya !',
+					showConfirmButton: false,
+					timer: 2500
+				});
+			</script>
+		<?php endif; ?>
+
+		<?php if ($this->session->flashdata('fail-pass')) : ?>
+			<script>
+				Swal.fire({
+					icon: 'error',
+					title: 'Password Salah !',
+					text: 'Silakan Periksa Kembali Password Kamu !',
+					showConfirmButton: false,
+					timer: 2500
+				});
+			</script>
+		<?php endif; ?>
+
+		<?php if ($this->session->flashdata('fail-email')) : ?>
+			<script>
+				Swal.fire({
+					icon: 'error',
+					title: 'Email Tidak Aktif !',
+					text: 'Silakan Hubungi Admin Untuk Membuat Email Aktif !',
+					showConfirmButton: false,
+					timer: 2500
+				});
+			</script>
+		<?php endif; ?>
+
+		<?php if ($this->session->flashdata('fail-login')) : ?>
+			<script>
+				Swal.fire({
+					icon: 'error',
+					title: 'Gagal Login !',
+					text: 'Silakan Periksa Kembali Email dan Password !',
+					showConfirmButton: false,
+					timer: 2500
+				});
+			</script>
+		<?php endif; ?>
+
+		<?php if ($this->session->flashdata('false-login')) : ?>
+			<script>
+				$("#siswalogin").modal("show")
+			</script>
 		<?php endif; ?>
 
 		</html>

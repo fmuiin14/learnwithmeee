@@ -1,7 +1,8 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Home extends CI_Controller
+{
 
 	public function index()
 	{
@@ -17,7 +18,6 @@ class Home extends CI_Controller {
 		$this->load->view('templates/header');
 		$this->load->view('about', $data);
 		$this->load->view('templates/footer');
-	
 	}
 
 	public function course()
@@ -33,6 +33,14 @@ class Home extends CI_Controller {
 		$data['navbar'] = $this->load->view('navbar', "", TRUE);
 		$this->load->view('templates/header');
 		$this->load->view('contact', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function login()
+	{
+		$data['navbar'] = $this->load->view('navbar', "", TRUE);
+		$this->load->view('templates/header');
+		$this->load->view('login', $data);
 		$this->load->view('templates/footer');
 	}
 }
