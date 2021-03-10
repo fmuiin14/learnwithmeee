@@ -40,7 +40,7 @@
 											<a href="<?= site_url('home/contact') ?>" class="dropdown-toggle">Kontak</a>
 										</li>
 										<li class="dropdown">
-											<a href="<?= site_url('home/login') ?>" class="dropdown-toggle">Masuk</a>
+											<a href="<?= site_url('login') ?>" class="dropdown-toggle">Masuk</a>
 										</li>
 									</ul>
 								</div>

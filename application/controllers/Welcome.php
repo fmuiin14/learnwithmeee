@@ -4,27 +4,60 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Welcome extends CI_Controller
 {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Login_model');
+	}
+
+
 	public function index()
 	{
 		$this->load->view('welcome_message');
 	}
 
-	public function validateLogin() {
+	public function auth()
+	{
+		$username = htmlspecialchars($this->input->post('username', TRUE), ENT_QUOTES);
+		$password = htmlspecialchars($this->input->post('password', TRUE), ENT_QUOTES);
+
+		$cek_pengajar = $this->Login_model->auth_pengajar($username, $password);
+
+		if ($cek_pengajar->num_rows() > 0) { //jika login sebagai dosen
+			$data = $cek_pengajar->row_array();
+			var_dump($data);
+			die();
+			$this->session->set_userdata('masuk', TRUE);
+			if ($data['level'] == '1') { //Akses admin
+				$this->session->set_userdata('akses', '1');
+				$this->session->set_userdata('ses_id', $data['nip']);
+				$this->session->set_userdata('ses_nama', $data['nama']);
+				redirect('page');
+			} else { //akses dosen
+				$this->session->set_userdata('akses', '2');
+				$this->session->set_userdata('ses_id', $data['nip']);
+				$this->session->set_userdata('ses_nama', $data['nama']);
+				redirect('page');
+			}
+		} else { //jika login sebagai mahasiswa
+			$cek_siswa = $this->Login_model->auth_siswa($username, $password);
+			if ($cek_siswa->num_rows() > 0) {
+				$data = $cek_siswa->row_array();
+				$this->session->set_userdata('masuk', TRUE);
+				$this->session->set_userdata('akses', '3');
+				$this->session->set_userdata('ses_id', $data['nim']);
+				$this->session->set_userdata('ses_nama', $data['nama']);
+				redirect('page');
+			} else {  // jika username dan password tidak ditemukan atau salah
+				$url = base_url();
+				echo $this->session->set_flashdata('msg', 'Username Atau Password Salah');
+				redirect($url);
+			}
+		}
+	}
+
+	public function validateLogin()
+	{
 		$this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
 			'required' => 'Email harus di isi!',
 			'valid_email' => 'Email tidak valid!',
@@ -36,8 +69,10 @@ class Welcome extends CI_Controller
 
 		if ($this->form_validation->run() == false) {
 			$this->session->set_flashdata('false-login', TRUE);
-			$this->session->set_flashdata('validateLoginFalse', 
-			$this->form_validation->error_array());
+			$this->session->set_flashdata(
+				'validateLoginFalse',
+				$this->form_validation->error_array()
+			);
 			$this->load->library('user_agent');
 			redirect($this->agent->referrer());
 		} else {
@@ -46,22 +81,24 @@ class Welcome extends CI_Controller
 		}
 	}
 
-	private function login() {
+	private function login()
+	{
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
 
 		$user = $this->db->get_where('siswa', ['email' => $email])->row_array();
 
-		if($user) {
+		if ($user) {
 			// user ada
-			if($user['is_active'] == 1) {
+			if ($user['is_active'] == 1) {
 				// cek password
 				if (password_verify($password, $user['password'])) {
-					$data = ['email' => $user['email'],
-				];
+					$data = [
+						'email' => $user['email'],
+					];
 
-				$this->session->set_userdata($data);
-				redirect(base_url('user'));
+					$this->session->set_userdata($data);
+					redirect(base_url('user'));
 				} else {
 					$this->session->set_flashdata('fail-pass', 'Gagal!');
 					redirect(base_url('home'));
@@ -126,7 +163,8 @@ class Welcome extends CI_Controller
 		}
 	}
 
-	public function logout() {
+	public function logout()
+	{
 		$this->session->unset_userdata('email');
 		$this->session->set_flashdata('success-logout', 'Berhasil');
 		redirect(base_url('welcome/admin'));

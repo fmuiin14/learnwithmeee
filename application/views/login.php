@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col-xs-12 col-md-6">
                 <!-- user log form -->
-                <form method="POST" action="<?= base_url('welcome/validateLogin') ?>" class="user-log-form">
+                <form method="POST" action="<?= base_url('welcome/auth') ?>" class="user-log-form">
                     <h2>Login Form Siswa</h2>
                     <div class="form-group">
                         <input type="email" id="email" name="email" class="form-control element-block" placeholder="email address">
