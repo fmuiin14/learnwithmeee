@@ -42,7 +42,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Silakan login untuk mengakses akun Anda.</p>
-                <?= $this->session->flashdata('pesan'); ?>
+                <?= $this->session->flashdata('message'); ?>
                 <form action="<?= site_url('login/auth') ?>" method="post">
                     <div class="input-group mb-3">
                         <input type="email" name="email" class="form-control" placeholder="Email" required>

@@ -30,7 +30,7 @@
 
 	<!-- DataTables -->
 	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -49,8 +49,7 @@
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item dropdown user-menu">
 					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline"><?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
-																																											echo $data['user']['email']; ?></span>
+						<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="user-image img-circle elevation-2" alt="User Image"><span class="d-none d-md-inline"><?= $this->session->userdata('email'); ?></span>
 					</a>
 					<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 						<!-- User image -->
@@ -58,17 +57,20 @@
 							<img src="<?= base_url('assets/') ?>img/logo/logo.png" class="img-circle elevation-2" alt="User Image">
 
 							<p>
-								<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
-								echo $data['user']['username']; ?>
+								<?= $this->session->userdata('email'); ?>
 								<small>Member since
-									<?php $data['user'] = $this->db->get_where("admin", ['email' => $this->session->userdata('email')])->row_array();
-									echo $data['user']['date_created']; ?></small>
+									<?php
+									$tanggal = $this->session->userdata('date_created');
+									$hasil = date('d F Y', strtotime($tanggal));
+									echo $hasil;
+									?>
+								</small>
 							</p>
 						</li>
 						<!-- Menu Footer-->
 						<li class="user-footer">
 							<a href="#" class="btn btn-default btn-flat">Profile</a>
-							<a href="<?= base_url('welcome/logout') ?>" class="btn btn-default btn-flat float-right">Log out</a>
+							<a href="<?= base_url('login/logout') ?>" class="btn btn-default btn-flat float-right">Log out</a>
 						</li>
 					</ul>
 				</li>
