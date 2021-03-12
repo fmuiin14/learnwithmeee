@@ -37,10 +37,12 @@ class Login extends CI_Controller
 					$id = $x['id_user'];
 					$name = $x['nama'];
 					$email = $x['email'];
+					$user_level = $x['user_level'];
 					$date_created = $x['date_created'];
 					$this->session->set_userdata('id', $id);
 					$this->session->set_userdata('name', $name);
 					$this->session->set_userdata('email', $email);
+					$this->session->set_userdata('user_level', $user_level);
 					$this->session->set_userdata('date_created', $date_created);
 					redirect('backend/dashboard');
 				} else {
@@ -49,10 +51,12 @@ class Login extends CI_Controller
 					$id = $x['id_user'];
 					$name = $x['nama'];
 					$email = $x['email'];
+					$user_level = $x['user_level'];
 					$date_created = $x['date_created'];
 					$this->session->set_userdata('id', $id);
 					$this->session->set_userdata('name', $name);
 					$this->session->set_userdata('email', $email);
+					$this->session->set_userdata('user_level', $user_level);
 					$this->session->set_userdata('date_created', $date_created);
 					redirect('backend/dashboard');
 				}

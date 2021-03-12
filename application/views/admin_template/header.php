@@ -104,71 +104,109 @@
 						</li>
 						<li class="nav-header">MANAJEMEN SISWA</li>
 						<li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-copy"></i>
-								<p>
-									Master Siswa
-									<i class="fas fa-angle-left right"></i>
-								</p>
-							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="<?= base_url('admin/data_siswa') ?>" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Data Siswa</p>
-									</a>
-								</li>
-							</ul>
+							<?php $status = $this->session->userdata('user_level');
+							if ($status == '1') {
+							?>
+								<a href="#" class="nav-link">
+									<i class="nav-icon fas fa-copy"></i>
+									<p>
+										Master Siswa
+										<i class="fas fa-angle-left right"></i>
+									</p>
+								</a>
+							<?php } else { ?>
+								<a href="#" class="nav-link">
+									<i class="nav-icon fas fa-copy"></i>
+									<p>
+										Profile
+										<i class="fas fa-angle-left right"></i>
+									</p>
+								</a>
+							<?php } ?>
+							<?php $status = $this->session->userdata('user_level');
+							if ($status == '1') {
+							?>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="<?= base_url('admin/data_siswa') ?>" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Data Semua Siswa</p>
+										</a>
+									</li>
+								</ul>
+							<?php } else { ?>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Data Siswa</p>
+										</a>
+									</li>
+								</ul>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="#" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Histori Pembelajaran</p>
+										</a>
+									</li>
+								</ul>
+							<?php } ?>
 						</li>
-						<li class="nav-header">MANAJEMEN GURU</li>
-						<li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-chart-pie"></i>
-								<p>
-									Master Guru
-									<i class="right fas fa-angle-left"></i>
-								</p>
-							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="pages/charts/chartjs.html" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Data Guru</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="pages/charts/flot.html" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Tambah Data Guru</p>
-									</a>
-								</li>
+						<?php $status = $this->session->userdata('user_level');
+						if ($status == '1') {
+						?>
+							<li class="nav-header">MANAJEMEN PENGAJAR</li>
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon fas fa-chart-pie"></i>
+									<p>
+										Master Pengajar
+										<i class="right fas fa-angle-left"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="pages/charts/chartjs.html" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Data Guru</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="pages/charts/flot.html" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Tambah Data Guru</p>
+										</a>
+									</li>
 
-							</ul>
-						</li>
-						<li class="nav-header">MANAJEMEN MATERI</li>
-						<li class="nav-item has-treeview">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-tree"></i>
-								<p>
-									Master Materi
-									<i class="fas fa-angle-left right"></i>
-								</p>
-							</a>
-							<ul class="nav nav-treeview">
-								<li class="nav-item">
-									<a href="pages/UI/general.html" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Data Materi</p>
-									</a>
-								</li>
-								<li class="nav-item">
-									<a href="pages/UI/icons.html" class="nav-link">
-										<i class="far fa-circle nav-icon"></i>
-										<p>Tambah Materi</p>
-									</a>
-								</li>
-							</ul>
-						</li>
+								</ul>
+							</li>
+							<li class="nav-header">MANAJEMEN MATERI</li>
+							<li class="nav-item has-treeview">
+								<a href="#" class="nav-link">
+									<i class="nav-icon fas fa-tree"></i>
+									<p>
+										Master Materi
+										<i class="fas fa-angle-left right"></i>
+									</p>
+								</a>
+								<ul class="nav nav-treeview">
+									<li class="nav-item">
+										<a href="pages/UI/general.html" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Data Materi</p>
+										</a>
+									</li>
+									<li class="nav-item">
+										<a href="pages/UI/icons.html" class="nav-link">
+											<i class="far fa-circle nav-icon"></i>
+											<p>Tambah Materi</p>
+										</a>
+									</li>
+								</ul>
+							</li>
+							<? } else { ?>
+						<?php } ?>
 						<li class="nav-header">ABOUT</li>
 						<li class="nav-item has-treeview">
 							<a href="#" class="nav-link">
