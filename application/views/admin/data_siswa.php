@@ -64,10 +64,10 @@
 												<img height="20px" src="<?= base_url('assets/photo/' . $u->image) ?>" alt="">
 											</td>
 											<td><?= $u->is_active ? 'Aktif' : 'Tidak Aktif' ?></td>
-											<td><a href="<?= site_url('admin/detail_siswa/' . $u->id_siswa) ?>" class="btn btn-success">Detail</a></td>
+											<td><a href="<?= site_url('admin/detail_siswa/' . $u->id_user) ?>" class="btn btn-success">Detail</a></td>
 											<td class="text-center">
-												<a href="<?= site_url('admin/update_siswa/') . $u->id_siswa ?>" class="btn btn-info">Update</a>
-												<a href="<?= site_url('admin/delete_siswa/') . $u->id_siswa ?>" class="btn btn-danger remove" onclick="return confirm('Are you sure want to Delete this ?')">Delete</a>
+												<a href="<?= site_url('admin/update_siswa/') . $u->id_user ?>" class="btn btn-info">Update</a>
+												<a href="<?= site_url('admin/delete_siswa/') . $u->id_user ?>" class="btn btn-danger remove" onclick="return confirm('Are you sure want to Delete this ?')">Delete</a>
 											</td>
 
 										</tr>

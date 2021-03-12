@@ -69,7 +69,13 @@
 						</li>
 						<!-- Menu Footer-->
 						<li class="user-footer">
-							<a href="#" class="btn btn-default btn-flat">Profile</a>
+							<?php
+							$status = $this->session->userdata('user_level');
+							if ($status == '1') { ?>
+								<a href="<?= site_url('backend/ChangePassword/admin_password') ?>" class="btn btn-default btn-flat">Ubah Password</a>
+							<?php } else { ?>
+								<a href="#" class="btn btn-default btn-flat">Profile</a>
+							<?php } ?>
 							<a href="<?= base_url('login/logout') ?>" class="btn btn-default btn-flat float-right">Log out</a>
 						</li>
 					</ul>
@@ -95,7 +101,7 @@
 					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 						<li class="nav-header">DASHBOARD</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link active">
+							<a href="<?= site_url('backend/dashboard') ?>" class="nav-link active">
 								<i class="nav-icon fas fa-tachometer-alt"></i>
 								<p>
 									Dashboard
@@ -107,7 +113,7 @@
 							<?php $status = $this->session->userdata('user_level');
 							if ($status == '1') {
 							?>
-								<a href="#" class="nav-link">
+								<a href="<?= site_url('backend/siswa'); ?>" class="nav-link">
 									<i class="nav-icon fas fa-copy"></i>
 									<p>
 										Master Siswa
