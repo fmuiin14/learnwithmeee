@@ -12,14 +12,11 @@ class Siswa extends CI_Controller
 
     public function index()
     {
-        $this->load->model('m_siswa');
+        $this->load->model('M_siswa');
 
-        $data['user'] = $this->db->get_where(
-            'admin',
-            ['email' => $this->session->userdata('email')]
-        )->row_array();
+        $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
 
-        $data['user'] = $this->m_siswa->tampil_data()->result();
+        $data['user'] = $this->M_siswa->tampil_data()->result();
 
 
         $this->load->view('admin_template/header');

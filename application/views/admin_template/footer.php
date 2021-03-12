@@ -14,8 +14,6 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery -->
-<script src="<?= base_url('assets/be/') ?>plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="<?= base_url('assets/be/') ?>plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -52,6 +50,55 @@
 		$('#nama-table').DataTable();
 	});
 </script>
+
+<!-- start sweetalert response -->
+<?php if ($this->session->flashdata('sukses')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'Berhasil mengubah password',
+			text: 'Silakan gunakan password yang baru kamu ubah untuk login selanjutnya !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('tidak-sesuai')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'error',
+			title: 'Password baru tidak sesuai',
+			text: 'Password baru dan Konfirmasi password baru tidak sesuai !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('password-salah')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'error',
+			title: 'Password salah',
+			text: 'Password yang Anda masukkan salah !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('userdata-tidak')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'error',
+			title: 'Userdata tidak ada',
+			text: 'Silakan login ulang !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
 
 </body>
 

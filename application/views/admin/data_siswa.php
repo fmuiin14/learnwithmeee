@@ -24,7 +24,7 @@
 							<div class="card card-primary card-outline">
 								<div class="card-body text-center">
 									<p class="card-text">Kamu bisa menambah data siswa, dengan menekan tombol di bawah ini.</p>
-									<a href="<?= base_url('admin/tambah_data_siswa') ?>" class="btn btn-primary">Tambah Data Siswa</a>
+									<a href="#" class="btn btn-primary">Tambah Data Siswa</a>
 								</div>
 							</div>
 						</div>

@@ -36,18 +36,18 @@ class ChangePassword extends CI_Controller
             if ($checking_old_password->num_rows() > 0) {
                 if ($new_password == $conf_password) {
                     $this->changepassword_model->change_password($user_id, $new_pass);
-                    $this->session->set_flashdata('msg', 'success');
+                    $this->session->set_flashdata('sukses', 'success');
                     redirect('backend/ChangePassword/admin_password');
                 } else {
-                    $this->session->set_flashdata('msg', 'error-notmatch');
+                    $this->session->set_flashdata('tidak-sesuai', 'tidak-sesuai');
                     redirect('backend/ChangePassword/admin_password');
                 }
             } else {
-                $this->session->set_flashdata('msg', 'error-notfound');
+                $this->session->set_flashdata('password-salah', 'password-salah');
                 redirect('backend/ChangePassword/admin_password');
             }
         } else {
-            $this->session->set_flashdata('msg', 'error');
+            $this->session->set_flashdata('userdata-tidak', 'userdata-tidak');
             redirect('backend/ChangePassword/admin_password');
         }
     }

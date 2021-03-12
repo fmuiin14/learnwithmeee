@@ -16,7 +16,7 @@ class Admin extends CI_Controller
 	public function index()
 	{
 		$data['user'] = $this->db->get_where(
-			'admin',
+			'users',
 			['email' => $this->session->userdata('email')]
 		)->row_array();
 
@@ -27,22 +27,7 @@ class Admin extends CI_Controller
 
 	// untuk siswa start
 
-	public function data_siswa()
-	{
-		$this->load->model('m_siswa');
 
-		$data['user'] = $this->db->get_where(
-			'admin',
-			['email' => $this->session->userdata('email')]
-		)->row_array();
-
-		$data['user'] = $this->m_siswa->tampil_data()->result();
-
-
-		$this->load->view('admin_template/header');
-		$this->load->view('admin/data_siswa', $data);
-		$this->load->view('admin_template/footer');
-	}
 
 	public function delete_siswa($id)
 	{

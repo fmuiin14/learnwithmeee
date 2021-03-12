@@ -31,6 +31,17 @@
 	<!-- DataTables -->
 	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 	<link rel="stylesheet" href="<?= base_url('assets/be/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+
+	<!-- for sweetalert -->
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/jquery.js"></script>
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/plugins.js"></script>
+	<!-- include jQuery -->
+	<script src="<?= base_url('assets/') ?>js/jquery.main.js"></script>
+	<!-- include jQuery -->
+	<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
+	<script src="<?= base_url('assets/js/') ?>sweetalert2.all.min.js"></script>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -113,7 +124,7 @@
 							<?php $status = $this->session->userdata('user_level');
 							if ($status == '1') {
 							?>
-								<a href="<?= site_url('backend/siswa'); ?>" class="nav-link">
+								<a href="#" class="nav-link">
 									<i class="nav-icon fas fa-copy"></i>
 									<p>
 										Master Siswa
@@ -134,7 +145,7 @@
 							?>
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-										<a href="<?= base_url('admin/data_siswa') ?>" class="nav-link">
+										<a href="<?= site_url('backend/siswa'); ?>" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
 											<p>Data Semua Siswa</p>
 										</a>
