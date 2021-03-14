@@ -1,9 +1,11 @@
-<?php 
+<?php
 
-class M_siswa extends CI_Model {
+class M_siswa extends CI_Model
+{
 
-    public function tampil_data() {
-        return $this->db->get('users');
+    public function tampil_data()
+    {
+        return $this->db->query("SELECT * FROM users WHERE user_level = '2'");
     }
 
     public function delete_siswa($where, $table)
@@ -12,7 +14,8 @@ class M_siswa extends CI_Model {
         $this->db->delete($table);
     }
 
-    public function insertData($data, $table) {
+    public function insertData($data, $table)
+    {
         $this->db->insert($table, $data);
     }
 
@@ -20,5 +23,10 @@ class M_siswa extends CI_Model {
     {
         $query = $this->db->get_where('users', array('id_user' => $id))->row();
         return $query;
+    }
+
+    public function update_siswa($where, $table)
+    {
+        return $this->db->get_where($table, $where);
     }
 }
