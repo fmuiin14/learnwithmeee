@@ -12,8 +12,10 @@ class Dashboard extends CI_Controller
 
 	public function index()
 	{
+		$siswa = $this->db->query("SELECT * FROM users WHERE user_level = '2'");
+		$data['siswa'] = $siswa->num_rows();
 		$this->load->view('admin_template/header');
-		$this->load->view('backend/index');
+		$this->load->view('backend/index', $data);
 		$this->load->view('admin_template/footer');
 	}
 }
