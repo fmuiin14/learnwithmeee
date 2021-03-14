@@ -100,6 +100,30 @@
 	</script>
 <?php endif; ?>
 
+<?php if ($this->session->flashdata('user-delete')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'User berhasil di hapus',
+			text: 'User yang Anda pilih berhasil di hapus !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('tambah-siswa-sukses')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'User berhasil di tambahkan',
+			text: 'User yang Anda pilih berhasil di tambahkan !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
 </body>
 
 </html>

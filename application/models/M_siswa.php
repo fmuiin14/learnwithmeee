@@ -15,6 +15,10 @@ class M_siswa extends CI_Model {
     public function insertData($data, $table) {
         $this->db->insert($table, $data);
     }
-}
 
-?>
+    public function detail_siswa($id = null)
+    {
+        $query = $this->db->get_where('users', array('id_user' => $id))->row();
+        return $query;
+    }
+}

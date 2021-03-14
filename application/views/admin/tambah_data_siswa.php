@@ -21,7 +21,7 @@
 					<div class="card">
 						<div class="card-body">
 
-							<form action="<?= base_url('admin/tambahDataSiswaAksi') ?>" method="POST" enctype="multipart/form-data">
+							<form action="<?= base_url('backend/siswa/tambahDataSiswaAksi') ?>" method="POST" enctype="multipart/form-data">
 
 								<div class="form-group">
 									<label>Nama Siswa</label>
@@ -31,7 +31,7 @@
 
 								<div class="form-group">
 									<label>NIS</label>
-									<input type="text" name="nis" value="<?= set_value('nis') ?>" class="form-control">
+									<input type="number" name="nis" value="<?= set_value('nis') ?>" class="form-control">
 									<?= form_error('nis', '<div class="text-small text-danger">', '</div>') ?>
 								</div>
 
@@ -54,6 +54,12 @@
 								</div>
 
 								<div class="form-group">
+									<label>Agama</label>
+									<input type="text" name="agama" value="<?= set_value('agama') ?>" class="form-control">
+									<?= form_error('agama', '<div class="text-small text-danger">', '</div>') ?>
+								</div>
+
+								<div class="form-group">
 									<label>Tanggal Masuk</label>
 									<input type="date" name="tanggal_masuk" value="<?= set_value('tanggal_masuk') ?>" class="form-control">
 									<?= form_error('tanggal_masuk', '<div class="text-small text-danger">', '</div>') ?>
@@ -67,12 +73,6 @@
 										<option value="F">Perempuan</option>
 									</select>
 									<?= form_error('jenis_kelamin', '<div class="text-small text-danger">', '</div>') ?>
-								</div>
-
-								<div class="form-group">
-									<label>Agama</label>
-									<input type="text" name="agama" value="<?= set_value('agama') ?>" class="form-control">
-									<?= form_error('agama', '<div class="text-small text-danger">', '</div>') ?>
 								</div>
 
 								<div class="form-group">
