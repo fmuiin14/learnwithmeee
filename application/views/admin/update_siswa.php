@@ -45,7 +45,7 @@
 
                                     <div class="form-group">
                                         <label>No HP</label>
-                                        <input type="text" name="no_hp" value="<?= $user->no_hp ?>" class="form-control">
+                                        <input type="number" name="no_hp" value="<?= $user->no_hp ?>" class="form-control">
                                         <?= form_error('no_hp', '<div class="text-small text-danger">', '</div>') ?>
                                     </div>
 
@@ -69,6 +69,11 @@
                                         <label>Tempat Lahir</label>
                                         <input type="text" name="tempat_lahir" value="<?= $user->tempat_lahir ?>" class="form-control">
                                         <?= form_error('tempat_lahir', '<div class="text-small text-danger">', '</div>') ?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Photo (Kosongkan Jika Tidak Ingin mengubah Foto)</label>
+                                        <input type="file" name="photo" value="<?= set_value('photo') ?>" class="form-control">
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">Update</button>

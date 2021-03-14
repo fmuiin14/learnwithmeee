@@ -42,6 +42,21 @@
 	<!-- include jQuery -->
 	<script type="text/javascript" src="<?= base_url('assets/') ?>js/init.js"></script>
 	<script src="<?= base_url('assets/js/') ?>sweetalert2.all.min.js"></script>
+
+	<style>
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+			/* display: none; <- Crashes Chrome on hover */
+			-webkit-appearance: none;
+			margin: 0;
+			/* <-- Apparently some margin are still there even though it's hidden */
+		}
+
+		input[type=number] {
+			-moz-appearance: textfield;
+			/* Firefox */
+		}
+	</style>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">

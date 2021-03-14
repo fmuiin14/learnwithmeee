@@ -117,7 +117,19 @@
 		Swal.fire({
 			icon: 'success',
 			title: 'User berhasil di tambahkan',
-			text: 'User yang Anda pilih berhasil di tambahkan !',
+			text: 'User bisa login menggunakan email dan password sesuai dengan data yang Anda tambahkan !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('update-siswa-sukses')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'User berhasil di update',
+			text: 'User yang Anda pilih berhasil di Update !',
 			showConfirmButton: false,
 			timer: 4000
 		});

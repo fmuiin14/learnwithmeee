@@ -25,6 +25,11 @@ class M_siswa extends CI_Model
         return $query;
     }
 
+    public function updateData($table, $data, $where)
+    {
+        $this->db->update($table, $data, $where);
+    }
+
     public function update_siswa($where, $table)
     {
         return $this->db->get_where($table, $where);

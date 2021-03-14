@@ -8,6 +8,7 @@ class Siswa extends CI_Controller
             $url = base_url('login');
             redirect($url);
         }
+        $this->load->model('M_siswa');
     }
 
     public function index()
@@ -58,8 +59,60 @@ class Siswa extends CI_Controller
         $this->load->view('admin_template/footer');
     }
 
-    public function update_siswa_asli() {
-        // isinya
+    public function update_siswa_aksi()
+    {
+        $this->_rulesUpdate();
+
+        if ($this->form_validation->run() == FALSE) {
+            $id = $this->input->post('id_user');
+            $this->update_siswa($id);
+        } else {
+            // store isian dari form disini
+            $id = $this->input->post('id_user');
+            $nama = $this->input->post('nama_siswa');
+            $nis = $this->input->post('nis');
+            $email = $this->input->post('email');
+            $no_hp = $this->input->post('no_hp');
+            $agama = $this->input->post('agama');
+            $jenis_kelamin = $this->input->post('jenis_kelamin');
+
+            $tempat_lahir = $this->input->post('tempat_lahir');
+
+            // superglobal variabel dr php
+            $photo = $_FILES['photo']['name'];
+            if ($photo) {
+                $config['upload_path'] = './assets/photo';
+                $config['allowed_types'] = 'jpg|jpeg|png|tiff';
+                $config['encrypt_name'] = TRUE;
+
+                $this->load->library('upload', $config);
+                if (!$this->upload->do_upload('photo')) {
+                    echo "Photo gagal di upload";
+                } else {
+                    $photo = $this->upload->data('file_name');
+                    $this->db->set('image', $photo);
+                }
+            }
+
+            $data = array(
+                'nama' => $nama,
+                'nis' => $nis,
+                'email' => $email,
+                'no_hp' => $no_hp,
+                'agama' => $agama,
+                'jenis_kelamin' => $jenis_kelamin,
+                'tempat_lahir' => $tempat_lahir
+            );
+
+            $where = array(
+                'id_user' => $id
+            );
+
+            $this->M_siswa->updateData('users', $data, $where);
+
+            $this->session->set_flashdata('update-siswa-sukses', '<div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Data berhasil di tambahkan</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            redirect('backend/siswa');
+        }
     }
 
     public function tambah_data_siswa()
@@ -141,5 +194,16 @@ class Siswa extends CI_Controller
         $this->form_validation->set_rules('birthday', 'Tanggal Lahir', 'trim|required');
         $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
         $this->form_validation->set_rules('tanggal_masuk', 'Tanggal Masuk', 'trim|required');
+    }
+
+    public function _rulesUpdate()
+    {
+        $this->form_validation->set_rules('nama_siswa', 'Nama Siswa', 'trim|required');
+        $this->form_validation->set_rules('nis', 'NIS', 'trim|required|numeric');
+        $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+        $this->form_validation->set_rules('no_hp', 'No HP', 'trim|required|numeric');
+        $this->form_validation->set_rules('agama', 'Agama', 'trim|required');
+        $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+        $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
     }
 }

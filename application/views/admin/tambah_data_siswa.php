@@ -49,7 +49,7 @@
 
 								<div class="form-group">
 									<label>No HP</label>
-									<input type="text" name="no_hp" value="<?= set_value('no_hp') ?>" class="form-control">
+									<input type="number" name="no_hp" value="<?= set_value('no_hp') ?>" class="form-control">
 									<?= form_error('no_hp', '<div class="text-small text-danger">', '</div>') ?>
 								</div>
 
