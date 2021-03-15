@@ -14,7 +14,7 @@ class Siswa extends CI_Controller
     public function index()
     {
 
-        if ($this->session->userdata('id') != '1') {
+        if ($this->session->userdata('user_level') != '1') {
             $url = base_url('backend/dashboard');
             redirect($url);
         }

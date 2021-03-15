@@ -162,7 +162,7 @@
 									<li class="nav-item">
 										<a href="<?= site_url('backend/siswa'); ?>" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
-											<p>Data Semua Siswa</p>
+											<p>Data Siswa</p>
 										</a>
 									</li>
 								</ul>
@@ -199,15 +199,9 @@
 								</a>
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-										<a href="pages/charts/chartjs.html" class="nav-link">
+										<a href="<?= site_url('backend/pengajar') ?>" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
-											<p>Data Guru</p>
-										</a>
-									</li>
-									<li class="nav-item">
-										<a href="pages/charts/flot.html" class="nav-link">
-											<i class="far fa-circle nav-icon"></i>
-											<p>Tambah Data Guru</p>
+											<p>Data Pengajar</p>
 										</a>
 									</li>
 
