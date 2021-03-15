@@ -63,10 +63,10 @@
 												<img height="20px" src="<?= base_url('assets/photo/' . $educator->image) ?>" alt="">
 											</td>
 											<td><?= $educator->is_active ? 'Aktif' : 'Tidak Aktif' ?></td>
-											<td><a href="<?= site_url('backend/siswa/detail_siswa/' . $educator->id) ?>" class="btn btn-success">Detail</a></td>
+											<td><a href="<?= site_url('backend/pengajar/detail_pengajar/' . $educator->id) ?>" class="btn btn-success">Detail</a></td>
 											<td class="text-center">
-												<a href="<?= site_url('backend/siswa/update_siswa/') . $educator->id ?>" class="btn btn-info">Edit</a>
-												<a href="<?= site_url('backend/siswa/delete_siswa/') . $educator->id ?>" class="btn btn-danger remove" onclick="return confirm('Are you sure want to Delete this ?')">Delete</a>
+												<a href="<?= site_url('backend/pengajar/update_pengajar/') . $educator->id ?>" class="btn btn-info">Edit</a>
+												<a href="<?= site_url('backend/pengajar/delete_pengajar/') . $educator->id ?>" class="btn btn-danger remove" onclick="return confirm('Are you sure want to Delete this ?')">Delete</a>
 											</td>
 
 										</tr>

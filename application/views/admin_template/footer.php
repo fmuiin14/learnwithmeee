@@ -136,6 +136,42 @@
 	</script>
 <?php endif; ?>
 
+<?php if ($this->session->flashdata('tambah-pengajar-sukses')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'Pengajar berhasil di tambahkan',
+			text: 'Pengajar yang Anda isi berhasil di Tambahkan !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('update-pengajar-sukses')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'Pengajar berhasil di update',
+			text: 'Pengajar yang Anda update berhasil di Ubah !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
+<?php if ($this->session->flashdata('pengajar-delete')) : ?>
+	<script>
+		Swal.fire({
+			icon: 'success',
+			title: 'Pengajar berhasil di delete',
+			text: 'Pengajar yang Anda delete berhasil di Hapus !',
+			showConfirmButton: false,
+			timer: 4000
+		});
+	</script>
+<?php endif; ?>
+
 </body>
 
 </html>
