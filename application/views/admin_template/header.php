@@ -100,7 +100,7 @@
 							if ($status == '1') { ?>
 								<a href="<?= site_url('backend/ChangePassword/admin_password') ?>" class="btn btn-default btn-flat">Ubah Password</a>
 							<?php } else { ?>
-								<a href="#" class="btn btn-default btn-flat">Profile</a>
+								<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-default btn-flat">Profile</a>
 							<?php } ?>
 							<a href="<?= base_url('login/logout') ?>" class="btn btn-default btn-flat float-right">Log out</a>
 						</li>
@@ -169,7 +169,7 @@
 							<?php } else { ?>
 								<ul class="nav nav-treeview">
 									<li class="nav-item">
-										<a href="#" class="nav-link">
+										<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="nav-link">
 											<i class="far fa-circle nav-icon"></i>
 											<p>Data Siswa</p>
 										</a>
@@ -250,13 +250,13 @@
 							</a>
 							<ul class="nav nav-treeview">
 								<li class="nav-item">
-									<a href="pages/forms/general.html" class="nav-link">
+									<a href="<?= site_url('backend/about/developer') ?>" class="nav-link">
 										<i class="far fa-circle nav-icon"></i>
 										<p>About Developer</p>
 									</a>
 								</li>
 								<li class="nav-item">
-									<a href="pages/forms/advanced.html" class="nav-link">
+									<a href="<?= site_url('backend/about/learnwithme') ?>" class="nav-link">
 										<i class="far fa-circle nav-icon"></i>
 										<p>About learnWithMe</p>
 									</a>

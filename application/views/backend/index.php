@@ -256,7 +256,7 @@
 										<p class="card-text">Kamu bisa melengkapi data profile, dengan
 											menekan
 											tombol di bawah ini.</p>
-										<a href="<?= site_url('backend/siswa/profile_siswa') ?>" class="btn btn-primary">Lengkapi Profile</a>
+										<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-primary">Lengkapi Profile</a>
 									</div>
 								</div>
 							</div>

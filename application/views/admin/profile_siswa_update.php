@@ -22,7 +22,7 @@
                         <div class="card-body">
 
                             <?php foreach ($users as $user) : ?>
-                                <form action="#" method="POST" enctype="multipart/form-data">
+                                <form action="<?= site_url('backend/siswa/profile_siswa_update_aksi') ?>" method="POST" enctype="multipart/form-data">
 
                                     <div class="form-group">
                                         <label>Nama Siswa</label>

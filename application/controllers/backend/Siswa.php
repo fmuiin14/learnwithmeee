@@ -13,6 +13,12 @@ class Siswa extends CI_Controller
 
     public function index()
     {
+
+        if ($this->session->userdata('id') != '1') {
+            $url = base_url('backend/dashboard');
+            redirect($url);
+        }
+
         $this->load->model('M_siswa');
 
         $data['user'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
@@ -208,10 +214,19 @@ class Siswa extends CI_Controller
     }
 
     // siswa start here
-    public function profile_siswa()
+    public function profile_siswa($id)
     {
+        $this->load->model('m_siswa');
+        $where = array('id_user' => $id);
+
+        $detail = $this->m_siswa->detail_siswa($id);
+        $data['detail'] = $detail;
+
+        // var_dump($data['detail']);
+        // die();
+
         $this->load->view('admin_template/header');
-        $this->load->view('admin/profile_siswa');
+        $this->load->view('admin/profile_siswa', $data);
         $this->load->view('admin_template/footer');
     }
 
@@ -224,6 +239,63 @@ class Siswa extends CI_Controller
         $this->load->view('admin_template/header');
         $this->load->view('admin/profile_siswa_update', $data);
         $this->load->view('admin_template/footer');
+    }
+
+    public function profile_siswa_update_aksi()
+    {
+        $this->_rulesUpdate();
+
+        if ($this->form_validation->run() == FALSE) {
+            $id = $this->input->post('id_user');
+            $this->profile_siswa($id);
+        } else {
+            // store isian dari form disini
+            $id = $this->input->post('id_user');
+            $nama = $this->input->post('nama_siswa');
+            $nis = $this->input->post('nis');
+            $email = $this->input->post('email');
+            $no_hp = $this->input->post('no_hp');
+            $agama = $this->input->post('agama');
+            $jenis_kelamin = $this->input->post('jenis_kelamin');
+
+            $tempat_lahir = $this->input->post('tempat_lahir');
+
+            // superglobal variabel dr php
+            $photo = $_FILES['photo']['name'];
+            if ($photo) {
+                $config['upload_path'] = './assets/photo';
+                $config['allowed_types'] = 'jpg|jpeg|png|tiff';
+                $config['encrypt_name'] = TRUE;
+
+                $this->load->library('upload', $config);
+                if (!$this->upload->do_upload('photo')) {
+                    echo "Photo gagal di upload";
+                } else {
+                    $photo = $this->upload->data('file_name');
+                    $this->db->set('image', $photo);
+                }
+            }
+
+            $data = array(
+                'nama' => $nama,
+                'nis' => $nis,
+                'email' => $email,
+                'no_hp' => $no_hp,
+                'agama' => $agama,
+                'jenis_kelamin' => $jenis_kelamin,
+                'tempat_lahir' => $tempat_lahir
+            );
+
+            $where = array(
+                'id_user' => $id
+            );
+
+            $this->M_siswa->updateData('users', $data, $where);
+            $id_siswa = $this->session->userdata('id');
+
+            $this->session->set_flashdata('update-siswa-sukses', '<div class="alert alert-success alert-dismissible fade show" role="alert"><strong>Data berhasil di tambahkan</strong><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            redirect('backend/siswa/profile_siswa/' . $id_siswa);
+        }
     }
     // siswa end here
 }
