@@ -206,4 +206,24 @@ class Siswa extends CI_Controller
         $this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
         $this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
     }
+
+    // siswa start here
+    public function profile_siswa()
+    {
+        $this->load->view('admin_template/header');
+        $this->load->view('admin/profile_siswa');
+        $this->load->view('admin_template/footer');
+    }
+
+    public function profile_siswa_update($id)
+    {
+        $this->load->model('m_siswa');
+        $where = array('id_user' => $id);
+        $data['users'] = $this->m_siswa->update_siswa($where, 'users')->result();
+
+        $this->load->view('admin_template/header');
+        $this->load->view('admin/profile_siswa_update', $data);
+        $this->load->view('admin_template/footer');
+    }
+    // siswa end here
 }

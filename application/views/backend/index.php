@@ -155,12 +155,12 @@
 			<div class="container-fluid">
 				<!-- Info boxes -->
 				<div class="row">
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-6">
 						<div class="info-box">
 							<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
 							<div class="info-box-content">
-								<span class="info-box-text">Kelas Terakhir</span>
+								<span class="info-box-text">Kelas Selanjutnya</span>
 								<span class="info-box-number">
 									Monday, 8 Januari 2021
 								</span>
@@ -170,13 +170,13 @@
 						<!-- /.info-box -->
 					</div>
 					<!-- /.col -->
-					<div class="col-12 col-sm-6 col-md-4">
+					<div class="col-12 col-sm-6 col-md-6">
 						<div class="info-box mb-3">
 							<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
 							<div class="info-box-content">
-								<span class="info-box-text">Likes</span>
-								<span class="info-box-number">41,410</span>
+								<span class="info-box-text">Jumlah Kelas Pilihan</span>
+								<span class="info-box-number">1</span>
 							</div>
 							<!-- /.info-box-content -->
 						</div>
@@ -186,20 +186,6 @@
 
 					<!-- fix for small devices only -->
 					<div class="clearfix hidden-md-up"></div>
-
-					<div class="col-12 col-sm-6 col-md-4">
-						<div class="info-box mb-3">
-							<span class="info-box-icon bg-success elevation-1"><i class="fas fa-shopping-cart"></i></span>
-
-							<div class="info-box-content">
-								<span class="info-box-text">Sales</span>
-								<span class="info-box-number">760</span>
-							</div>
-							<!-- /.info-box-content -->
-						</div>
-						<!-- /.info-box -->
-					</div>
-					<!-- /.col -->
 		</section>
 		<!-- /.content -->
 
@@ -220,6 +206,44 @@
 						</div>
 						<!-- /.card -->
 					</div>
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-title">Pencapaianmu</h5>
+
+							</div>
+							<!-- /.card-header -->
+							<div class="card-body">
+								<div class="row">
+									<!-- /.col -->
+									<div class="col-md-10 mx-auto">
+										<p class="text-center">
+											<strong>Progress</strong>
+										</p>
+
+										<div class="progress-group">
+											Scratch
+											<span class="float-right"><b>160</b>/200</span>
+											<div class="progress progress-sm">
+												<div class="progress-bar bg-primary" style="width: 80%"></div>
+											</div>
+										</div>
+										<!-- /.progress-group -->
+
+
+									</div>
+									<!-- /.col -->
+								</div>
+								<!-- /.row -->
+							</div>
+							<!-- ./card-body -->
+						</div>
+						<!-- /.card -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
 					<!-- /.col-md-6 -->
 					<div class="col-md-12">
 						<div class="row">
@@ -232,7 +256,7 @@
 										<p class="card-text">Kamu bisa melengkapi data profile, dengan
 											menekan
 											tombol di bawah ini.</p>
-										<a href="#" class="btn btn-primary">Lengkapi Profile</a>
+										<a href="<?= site_url('backend/siswa/profile_siswa') ?>" class="btn btn-primary">Lengkapi Profile</a>
 									</div>
 								</div>
 							</div>
