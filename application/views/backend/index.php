@@ -10,6 +10,8 @@
 						$status = $this->session->userdata('user_level');
 						if ($status == '1') {
 							echo 'Admin';
+						} elseif ($status == '3') {
+							echo 'Pengajar';
 						} else {
 							echo 'Siswa';
 						}
@@ -149,7 +151,138 @@
 			</div><!-- /.container-fluid -->
 		</div>
 		<!-- /.content -->
+	<?php } else if ($status == '3') { ?>
+		<!-- Main content -->
+		<section class="content">
+			<div class="container-fluid">
+				<!-- Info boxes -->
+				<div class="row">
+					<div class="col-12 col-sm-6 col-md-6">
+						<div class="info-box">
+							<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+
+							<div class="info-box-content">
+								<span class="info-box-text">Kelas Selanjutnya</span>
+								<span class="info-box-number">
+									Monday, 8 Januari 2021
+								</span>
+							</div>
+							<!-- /.info-box-content -->
+						</div>
+						<!-- /.info-box -->
+					</div>
+					<!-- /.col -->
+					<div class="col-12 col-sm-6 col-md-6">
+						<div class="info-box mb-3">
+							<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+
+							<div class="info-box-content">
+								<span class="info-box-text">Jumlah Kelas Pilihan</span>
+								<span class="info-box-number">1</span>
+							</div>
+							<!-- /.info-box-content -->
+						</div>
+						<!-- /.info-box -->
+					</div>
+					<!-- /.col -->
+
+					<!-- fix for small devices only -->
+					<div class="clearfix hidden-md-up"></div>
+		</section>
+		<!-- /.content -->
+
+		<!-- Main content -->
+		<div class="content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 col-12">
+						<div class="card card-default">
+							<!-- /.card-header -->
+							<div class="card-body">
+								<div class="alert alert-success">
+									<h5><i class="icon fas fa-check"></i> Selamat Datang, <?= $this->session->userdata('name'); ?> !</h5>
+									Kamu sukses login untuk aplikasi ini. Berikut adalah halaman dashboard.
+								</div>
+							</div>
+							<!-- /.card-body -->
+						</div>
+						<!-- /.card -->
+					</div>
+					<div class="col-md-12">
+						<div class="card">
+							<div class="card-header">
+								<h5 class="card-title">Pencapaianmu</h5>
+
+							</div>
+							<!-- /.card-header -->
+							<div class="card-body">
+								<div class="row">
+									<!-- /.col -->
+									<div class="col-md-10 mx-auto">
+										<p class="text-center">
+											<strong>Progress</strong>
+										</p>
+
+										<div class="progress-group">
+											Scratch
+											<span class="float-right"><b>160</b>/200</span>
+											<div class="progress progress-sm">
+												<div class="progress-bar bg-primary" style="width: 80%"></div>
+											</div>
+										</div>
+										<!-- /.progress-group -->
+
+
+									</div>
+									<!-- /.col -->
+								</div>
+								<!-- /.row -->
+							</div>
+							<!-- ./card-body -->
+						</div>
+						<!-- /.card -->
+					</div>
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
+				<div class="row">
+					<!-- /.col-md-6 -->
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="card card-primary card-outline">
+									<div class="card-header">
+										<h5 class="m-0">Lengkapi Profile?</h5>
+									</div>
+									<div class="card-body">
+										<p class="card-text">Kamu bisa melengkapi data profile, dengan
+											menekan
+											tombol di bawah ini.</p>
+										<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-primary">Lengkapi Profile</a>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="card card-primary card-outline">
+									<div class="card-header">
+										<h5 class="m-0">Histori Pengajaran?</h5>
+									</div>
+									<div class="card-body">
+										<p class="card-text">Kamu bisa melihat histori pengajaran dengan menekan tombol di bawah ini.</p>
+										<a href="<?= base_url('admin/data_siswa') ?>" class="btn btn-primary">Histori Pembelajaran</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- /.col-md-6 -->
+				</div>
+				<!-- /.row -->
+			</div><!-- /.container-fluid -->
+		</div>
+		<!-- /.content -->
 	<?php } else { ?>
+		<!-- Siswa -->
 		<!-- Main content -->
 		<section class="content">
 			<div class="container-fluid">
