@@ -98,11 +98,14 @@
 							<?php
 							$status = $this->session->userdata('user_level');
 							if ($status == '1') { ?>
-								<a href="<?= site_url('backend/ChangePassword/admin_password') ?>" class="btn btn-default btn-flat">Ubah Password</a>
+								<a href="<?= site_url('backend/ChangePassword/admin_password') ?>" class="btn btn-default btn-flat" style="padding:8px;">Ubah Password</a>
+							<?php } elseif ($status == '2') { ?>
+								<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-default btn-flat" style="padding:8px;">Profile</a>
+								<a href="<?= site_url('backend/ChangePassword/siswa_password') ?>" class="btn btn-default btn-flat" style="padding:8px;">Ubah Password</a>
 							<?php } else { ?>
-								<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-default btn-flat">Profile</a>
+								<a href="#" class="btn btn-default btn-flat" style="padding:8px;">Profile</a>
 							<?php } ?>
-							<a href="<?= base_url('login/logout') ?>" class="btn btn-default btn-flat float-right">Log out</a>
+							<a href="<?= base_url('login/logout') ?>" class="btn btn-default btn-flat float-right" style="padding:8px;">Log out</a>
 						</li>
 					</ul>
 				</li>

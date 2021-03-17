@@ -288,34 +288,38 @@
 			<div class="container-fluid">
 				<!-- Info boxes -->
 				<div class="row">
-					<div class="col-12 col-sm-6 col-md-6">
-						<div class="info-box">
-							<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
+					<?php foreach ($nexttgl as $next) : ?>
+						<div class="col-12 col-sm-6 col-md-6">
+							<div class="info-box">
+								<span class="info-box-icon bg-info elevation-1"><i class="fas fa-cog"></i></span>
 
-							<div class="info-box-content">
-								<span class="info-box-text">Kelas Selanjutnya</span>
-								<span class="info-box-number">
-									Monday, 8 Januari 2021
-								</span>
+								<div class="info-box-content">
+									<span class="info-box-text">Kelas Selanjutnya</span>
+									<span class="info-box-number">
+										<?php $tanggal = $next->pertemuan_selanjutnya;
+										$tgl = date('d F Y', strtotime($tanggal));
+										echo $tgl; ?>
+									</span>
+								</div>
+								<!-- /.info-box-content -->
 							</div>
-							<!-- /.info-box-content -->
+							<!-- /.info-box -->
 						</div>
-						<!-- /.info-box -->
-					</div>
-					<!-- /.col -->
-					<div class="col-12 col-sm-6 col-md-6">
-						<div class="info-box mb-3">
-							<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
+						<!-- /.col -->
+						<div class="col-12 col-sm-6 col-md-6">
+							<div class="info-box mb-3">
+								<span class="info-box-icon bg-danger elevation-1"><i class="fas fa-thumbs-up"></i></span>
 
-							<div class="info-box-content">
-								<span class="info-box-text">Jumlah Kelas Pilihan</span>
-								<span class="info-box-number">1</span>
+								<div class="info-box-content">
+									<span class="info-box-text">Jumlah Pertemuan</span>
+									<span class="info-box-number"><?= $next->pertemuan_ke ?></span>
+								</div>
+								<!-- /.info-box-content -->
 							</div>
-							<!-- /.info-box-content -->
+							<!-- /.info-box -->
 						</div>
-						<!-- /.info-box -->
-					</div>
-					<!-- /.col -->
+						<!-- /.col -->
+					<?php endforeach; ?>
 
 					<!-- fix for small devices only -->
 					<div class="clearfix hidden-md-up"></div>
@@ -339,40 +343,6 @@
 						</div>
 						<!-- /.card -->
 					</div>
-					<div class="col-md-12">
-						<div class="card">
-							<div class="card-header">
-								<h5 class="card-title">Pencapaianmu</h5>
-
-							</div>
-							<!-- /.card-header -->
-							<div class="card-body">
-								<div class="row">
-									<!-- /.col -->
-									<div class="col-md-10 mx-auto">
-										<p class="text-center">
-											<strong>Progress</strong>
-										</p>
-
-										<div class="progress-group">
-											Scratch
-											<span class="float-right"><b>160</b>/200</span>
-											<div class="progress progress-sm">
-												<div class="progress-bar bg-primary" style="width: 80%"></div>
-											</div>
-										</div>
-										<!-- /.progress-group -->
-
-
-									</div>
-									<!-- /.col -->
-								</div>
-								<!-- /.row -->
-							</div>
-							<!-- ./card-body -->
-						</div>
-						<!-- /.card -->
-					</div>
 					<!-- /.col -->
 				</div>
 				<!-- /.row -->
@@ -386,7 +356,7 @@
 										<h5 class="m-0">Lengkapi Profile?</h5>
 									</div>
 									<div class="card-body">
-										<p class="card-text">Kamu bisa melengkapi data profile, dengan
+										<p class="card-text">Kamu bisa melengkapi data profile dan menambah foto, dengan
 											menekan
 											tombol di bawah ini.</p>
 										<a href="<?= site_url('backend/siswa/profile_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-primary">Lengkapi Profile</a>
