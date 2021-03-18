@@ -110,12 +110,12 @@ class Login extends CI_Controller
 					redirect('backend/dashboard');
 				}
 			} else {
-				$url = base_url('login');
+				$url = base_url('login/educator');
 				echo $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><i class="fa fa-close"></i></button> Username / Password Salah</div>');
 				redirect($url);
 			}
 		} else {
-			$url = base_url('login');
+			$url = base_url('login/educator');
 			echo $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><i class="fa fa-close"></i></button> Username / Password Salah</div>');
 			redirect($url);
 		}

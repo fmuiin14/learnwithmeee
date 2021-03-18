@@ -370,7 +370,7 @@
 									</div>
 									<div class="card-body">
 										<p class="card-text">Kamu bisa melihat histori pembelajaran dengan menekan tombol di bawah ini.</p>
-										<a href="<?= base_url('admin/data_siswa') ?>" class="btn btn-primary">Histori Pembelajaran</a>
+										<a href="<?= base_url('backend/siswa/history_siswa/') . $this->session->userdata('id'); ?>" class="btn btn-primary">Histori Pembelajaran</a>
 									</div>
 								</div>
 							</div>
