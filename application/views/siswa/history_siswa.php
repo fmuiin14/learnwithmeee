@@ -42,10 +42,10 @@
                                             <td><?php $tanggal = $row->pertemuan_terakhir;
                                                 $tgl = date('d F Y', strtotime($tanggal));
                                                 echo $tgl; ?></td>
-                                            <td><?= $row->nama_educator; ?></td>
+                                            <td><?= $row->nama; ?></td>
                                             <td><?= $row->nama_program; ?></td>
                                             <td><?= $row->level_name; ?></td>
-                                            <td><?= $row->project_name; ?></td>
+                                            <td><?= $row->nama_program; ?></td>
                                             <td><?= $row->pertemuan_ke; ?></td>
                                         </tr>
                                     <?php endforeach; ?>

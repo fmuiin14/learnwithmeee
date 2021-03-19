@@ -303,7 +303,16 @@ class Siswa extends CI_Controller
     {
         $idnya = $this->session->userdata('id');
 
-        $data['alltgl'] = $this->db->query("SELECT * FROM ((((learning_histories INNER JOIN levels ON learning_histories.level_id=levels.id) INNER JOIN program_details ON learning_histories.program_detail_id=program_details.id) INNER JOIN programs ON learning_histories.program_id=programs.id) INNER JOIN educators ON learning_histories.educator_id=educators.id) WHERE user_id = '$idnya' AND pertemuan_terakhir < now() ORDER BY pertemuan_terakhir ASC")->result();
+        $data['alltgl'] = $this->db->query("SELECT learning_histories.`user_id`, learning_histories.`educator_id`, 
+        learning_histories.`pertemuan_terakhir`, learning_histories.`pertemuan_ke`, learning_histories.`program_id`, 
+        educators.`id` AS educatorsid, educators.`nama`, programs.`id`, learning_histories.`pertemuan_ke`, programs.`nama_program`, 
+        learning_histories.`level_id`, 
+        levels.`id`, levels.`level_name`, learning_histories.nama_materi 
+        FROM learning_histories 
+        INNER JOIN levels ON learning_histories.`level_id`=levels.`id` 
+        INNER JOIN educators ON learning_histories.`educator_id`=educators.`id`
+        INNER JOIN programs ON learning_histories.`program_id`=programs.`id` WHERE learning_histories.`user_id`='$idnya' 
+        AND pertemuan_terakhir < NOW() ORDER BY pertemuan_terakhir ASC;")->result();
 
         // var_dump($data['alltgl']);
         // die();
