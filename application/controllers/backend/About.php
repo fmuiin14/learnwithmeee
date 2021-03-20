@@ -19,6 +19,8 @@ class About extends CI_Controller
 
 	public function learnwithme()
 	{
+		$this->load->view('admin_template/header');
 		$this->load->view('backend/about_learnwithme');
+		$this->load->view('admin_template/footer');
 	}
 }

@@ -21,16 +21,18 @@
                 <div class="col-md-12">
                     <div class="bg-white p-4">
                         <div class="table-responsive">
-                            <table id="nama-table" class="table align-items-center table-flush">
+                            <table id="nama-table" class="table table-bordered align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr class="text-center">
                                         <th scope="col">ID</th>
-                                        <th scope="col">Pertemuan Terakhir</th>
+                                        <th scope="col">Pertemuan</th>
                                         <th scope="col">Nama Pengajar</th>
                                         <th scope="col">Modul Aplikasi</th>
                                         <th scope="col">Level Aplikasi</th>
                                         <th scope="col">Materi</th>
                                         <th scope="col">Sesi</th>
+                                        <th scope="col">Catatan Dari Pengajar</th>
+                                        <th scope="col">Keterangan</th>
 
                                     </tr>
                                 </thead>
@@ -45,8 +47,10 @@
                                             <td><?= $row->nama; ?></td>
                                             <td><?= $row->nama_program; ?></td>
                                             <td><?= $row->level_name; ?></td>
-                                            <td><?= $row->nama_program; ?></td>
+                                            <td><?= $row->nama_materi; ?></td>
                                             <td><?= $row->pertemuan_ke; ?></td>
+                                            <td><?= $row->notes; ?></td>
+                                            <td><?= $row->keterangan; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>

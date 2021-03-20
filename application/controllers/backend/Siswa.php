@@ -216,6 +216,13 @@ class Siswa extends CI_Controller
     // siswa start here
     public function profile_siswa($id)
     {
+
+        if ($this->session->userdata('id') != $id) {
+            $url = base_url('backend/dashboard');
+            redirect($url);
+        }
+
+
         $this->load->model('m_siswa');
         $where = array('id_user' => $id);
 
@@ -301,9 +308,14 @@ class Siswa extends CI_Controller
     // histori siswa
     public function history_siswa($id)
     {
+        if ($this->session->userdata('id') != $id) {
+            $url = base_url('backend/dashboard');
+            redirect($url);
+        }
+
         $idnya = $this->session->userdata('id');
 
-        $data['alltgl'] = $this->db->query("SELECT learning_histories.`user_id`, learning_histories.`educator_id`, 
+        $data['alltgl'] = $this->db->query("SELECT learning_histories.`user_id`, learning_histories.`notes`, learning_histories.`keterangan`, learning_histories.`educator_id`, 
         learning_histories.`pertemuan_terakhir`, learning_histories.`pertemuan_ke`, learning_histories.`program_id`, 
         educators.`id` AS educatorsid, educators.`nama`, programs.`id`, learning_histories.`pertemuan_ke`, programs.`nama_program`, 
         learning_histories.`level_id`, 

@@ -47,7 +47,9 @@
 <script src="<?= base_url('assets/be/') ?>plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <script>
 	$(document).ready(function() {
-		$('#nama-table').DataTable();
+		$('#nama-table').DataTable({
+			"scrollX": true
+		});
 	});
 </script>
 
