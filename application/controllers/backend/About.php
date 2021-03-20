@@ -12,7 +12,9 @@ class About extends CI_Controller
 
 	public function developer()
 	{
+		$this->load->view('admin_template/header');
 		$this->load->view('backend/about_developer');
+		$this->load->view('admin_template/footer');
 	}
 
 	public function learnwithme()
