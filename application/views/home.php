@@ -1,584 +1,378 @@
 <?= $navbar; ?>
-<!-- contain main informative part of the site -->
-<main id="main">
-	<!-- intro learn search block -->
-	<section class="intro-learn-search-block bg-cover text-center" style="background-image: url(http://placehold.it/1920x740);">
-		<div class="container holder">
-			<!-- learn search form -->
-			<div class="align">
-				<form action="#" class="align learn-search-form text">
-					<h1>Belajar dari yang terbaik. Dimanapun.</h1>
-					<p>Tingkatkan skill kamu untuk bekal masa depan, mulai dari sekarang.</p>
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Apa yang ingin kamu pelajari hari ini?">
-						<span class="input-group-btn">
-							<button class="btn btn-warning btn-theme" type="button"><i class="fas fa-search"></i></button>
-						</span>
+<div class="untree_co-hero overlay" style="background-image: url('<?= base_url('assets/lp') ?>/images/hero_bg.jpg');">
+	<div class="container">
+		<div class="row align-items-center justify-content-center">
+			<div class="col-12">
+				<div class="row justify-content-left">
+					<!-- <div class="col-lg-6 text-center align-self-center order-lg-2">
+                            <a href="https://www.youtube.com/channel/UCcOZ6OQJ9D6hvguFlkUuqYw?sub_confirmation=1"
+                                data-fancybox class="video-play-btn"
+                                data-aos="fade-up" data-aos-delay="400">
+                                <img src="images/icon/play-button.svg" class="img-fluid" alt="">
+                            </a>
+                        </div> -->
+					<div class="col-lg-6 text-center text-lg-left">
+						<h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Belajar Koding
+							Lebih Asyik Dan Menyenangkan</h1>
+						<div class="mb-5 text-white desc mx-" data-aos="fade-up" data-aos-delay="200">
+							<p>Persiapkan bekal penting anak Anda untuk karir mereka dalam melatih logika dan
+								kreativitas.</p>
+						</div>
+						<p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#kami-tawarkan" class="btn btn-primary">Pelajari Sekarang</a></p>
 					</div>
-					<!-- learning cources list -->
-					<ul class="list-unstyled learning-cources-list text-left">
-						<li>
-							<a href="#">
-								<i class="far fa-user icn"></i>
-								<span class="text">Lebih dari 25+ instruktur</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="far fa-file-alt icn"></i>
-								<span class="text">25000+ Pembelajaran online</span>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<i class="fas fa-desktop icn"></i>
-								<span class="text">Belajar online dimanapun</span>
-							</a>
-						</li>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="untree_co-section py-0">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-lg-3">
+				<div class="block-v1 color-1" data-aos="fade-up" data-aos-delay="0">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/play.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Bermain</h3>
+					<p>Belajar lebih menyenangkan dengan metode pembelajaran yang asyik dan menarik, sehingga siswa
+						tidak merasa bosan selayaknya mereka bermain.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div class="block-v1 color-2" data-aos="fade-up" data-aos-delay="100">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/learn.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Belajar</h3>
+					<p>Pembelajaran dibuat sesuai dengan level dan kemampuan, sehingga siswa akan selalu memiliki
+						proses pembelajaran yang di dapatkan setiap harinya.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div class="block-v1 color-3" data-aos="fade-up" data-aos-delay="200">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/share.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Berbagi</h3>
+					<p>Siswa bebas berkreasi dalam apapun yang ia pelajari, mereka selalu memiliki kesempatan dalam
+						berbagi informasi, sehingga kemampuannya akan semakin terasah.</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-3">
+				<div class="block-v1 color-3" data-aos="fade-up" data-aos-delay="200" style="background-color: #a8328f;">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/story.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Bercerita</h3>
+					<p>Siswa juga berkontribusi dan bercerita seputar dirinya, kebimbangannya, dan pemikirannya,
+						sehingga kita dapat memberi masukkan untuk masa depannya.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="untree_co-section" id="kami-tawarkan">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+				<h2 class="line-bottom text-center mb-4">Apa Yang Kami Tawarkan</h2>
+				<p>Kelas yang kami tawarkan tidak hanya sekedar 'belajar', namun juga memberikan pemahaman yang
+					mendalam.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+				<div class="feature">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/globe.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Kelas Koding Beginner</h3>
+					<p>Di desain untuk pemula sebagai perkenalan di dunia programming (koding), mereka akan belajar
+						pemrograman dengan menggunakan aplikasi scratch dan tatap muka (GUI).</p>
+				</div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="feature">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/atom.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Kelas Koding Intermediate</h3>
+					<p>Merupakan kelas untuk belajar programming untuk level menengah, ada beberapa pilihan kelas
+						yang bisa diambil, diantaranya: </p>
+					<ul>
+						<li>Scratch Lanjutan</li>
+						<li>HTML CSS Bootstrap (Web Development)</li>
+						<li>MIT App Inventor (Mobile Development)</li>
+						<li>Pengenalan Python (Can Build Anything Development)</li>
 					</ul>
-				</form>
-			</div>
-		</div>
-	</section>
-	<!-- popular posts block -->
-	<section class="popular-posts-block container">
-		<header class="popular-posts-head">
-			<h2 class="popular-head-heading">Kursus Paling Populer</h2>
-		</header>
-		<div class="row">
-			<!-- popular posts slider -->
-			<div class="slider popular-posts-slider">
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-success text-white font-lato text-uppercase price-tag">Free</strong>
-							</div>
-							<h3 class="post-heading"><a href="course-single.html">Introduction to Mobile Apps Development</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="instructor-single.html">Sarah Johnson</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">200</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">3</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="far fa-star"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-primary text-white font-lato text-uppercase price-tag">$85.60</strong>
-							</div>
-							<h3 class="post-heading"><a href="course-single.html">How to Become a Startup Founder</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="instructor-single.html">Jhon Milton</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">200</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">3</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="far fa-star-half"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-primary text-white font-lato text-uppercase price-tag">$68.00</strong>
-							</div>
-							<h3 class="post-heading"><a href="course-single.html">Your Complete Guide to Self Devlopement</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="instructor-single.html">Peter Parker</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">48</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">5</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-success text-white font-lato text-uppercase price-tag">Free</strong>
-							</div>
-							<h3 class="post-heading"><a href="#">Introduction to Mobile Apps Development</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="#"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="#">Sarah Johnson</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">200</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">3</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="far fa-star"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-primary text-white font-lato text-uppercase price-tag">$85.60</strong>
-							</div>
-							<h3 class="post-heading"><a href="course-single.html">How to Become a Startup Founder</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="instructor-single.html">Jhon Milton</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">200</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">3</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="far fa-star-half"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-				<div>
-					<div class="col-xs-12">
-						<!-- popular post -->
-						<article class="popular-post">
-							<div class="aligncenter">
-								<img src="http://placehold.it/262x212" alt="image description">
-							</div>
-							<div>
-								<strong class="bg-primary text-white font-lato text-uppercase price-tag">$68.00</strong>
-							</div>
-							<h3 class="post-heading"><a href="course-single.html">Your Complete Guide to Self Devlopement</a></h3>
-							<div class="post-author">
-								<div class="alignleft no-shrink rounded-circle">
-									<a href="instructor-single.html"><img src="http://placehold.it/35x35" class="rounded-circle" alt="image description"></a>
-								</div>
-								<h4 class="author-heading"><a href="instructor-single.html">Peter Parker</a></h4>
-							</div>
-							<footer class="post-foot gutter-reset">
-								<ul class="list-unstyled post-statuses-list">
-									<li>
-										<a href="#">
-											<span class="fas icn fa-users no-shrink"><span class="sr-only">users</span></span>
-											<strong class="text fw-normal">48</strong>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<span class="fas icn no-shrink fa-comments"><span class="sr-only">comments</span></span>
-											<strong class="text fw-normal">5</strong>
-										</a>
-									</li>
-								</ul>
-								<ul class="star-rating list-unstyled">
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-									<li><span class="fas fa-star"><span class="sr-only">star</span></span></li>
-								</ul>
-							</footer>
-						</article>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- categories aside -->
-	<aside class="bg-cover categories-aside text-center" style="background-image: url(http://placehold.it/1920x365);">
-		<div class="container holder">
-			<header class="seperator-head text-center">
-				<h2>Pelajaran Yang Tersedia di learnWithMeee</h2>
-			</header>
-			<!-- categories list -->
-			<ul class="list-unstyled categories-list">
-				<li>
-					<a href="#">
-						<div class="align">
-							<span class="icn-wrap">
-								<img src="<?= 'assets/' ?>images/icon05.svg" width="44" height="48" alt="image description">
-							</span>
-							<strong class="h h5 element-block text-uppercase">Bahasa</strong>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div class="align">
-							<span class="icn-wrap">
-								<img src="<?= 'assets/' ?>images/icon06.svg" width="51" height="42" alt="image description">
-							</span>
-							<strong class="h h5 element-block text-uppercase">Programming</strong>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div class="align">
-							<span class="icn-wrap">
-								<img src="<?= 'assets/' ?>images/icon09.svg" width="51" height="51" alt="image description">
-							</span>
-							<strong class="h h5 element-block text-uppercase">Web Development</strong>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-	</aside>
-	<!-- how work block -->
-	<section class="container how-work-block text-center">
-		<header class="seperator-head">
-			<h2>Bagaimana Cara Memulai Kelas?</h2>
-			<p>Sebuah langkah besar selalu di awali dengan langkah kecil, mulai dari sekarang.</p>
-		</header>
-		<!-- steps guide holder -->
-		<div class="row">
-			<div class="steps-guide-holder">
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<!-- guide column -->
-					<div class="guide-column">
-						<span class="icn-wrap"><i class="far fa-user icn"></i></span>
-						<h3 class="fw-normal">Registrasi</h3>
-						<p>Mulai daftar sekarang dan dapatkan pembelajaran terbaik kami.</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<!-- guide column -->
-					<div class="guide-column">
-						<span class="icn-wrap"><i class="far fa-question-circle icn"></i></span>
-						<h3 class="fw-normal">Belajar Dengan Studi Kasus</h3>
-						<p>Kami memberikan studi kasus dalam tiap pembelajaran sebagai bahan portofolio kamu.</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<!-- guide column -->
-					<div class="guide-column">
-						<span class="icn-wrap"><i class="fas fa-book icn"></i></span>
-						<h3 class="fw-normal">Silabus Yang Tepat</h3>
-						<p>Di desain secara khusus dari pengalaman dan komunitas.</p>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-3">
-					<!-- guide column -->
-					<div class="guide-column">
-						<span class="icn-wrap"><i class="far fa-thumbs-up icn"></i></span>
-						<h3 class="fw-normal">Let's Begin!</h3>
-						<p>Mari mulai petualanganmu dimulai dari sini.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
-	<aside class="bg-theme aside-note-block text-white">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-8 col">
-					<span class="icn-wrap alignleft element-block">
-						<img src="<?= 'assets/' ?>images/icon10.png" alt="image description">
-					</span>
-					<div class="descr-wrap">
-						<h3>Pembelajar Baru Registasi Setiap Hari</h3>
-						<p><strong class="fw-semi">Video baru, artikel baru, buku populer, dan lainnya.</strong></p>
-					</div>
 				</div>
-				<div class="col-xs-12 col-sm-4 col text-right">
-					<a href="#" class="btn btn-white btn-default text-capitalize font-lato fw-normal">Registrasi Sekarang</a>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="feature">
+					<img src="<?= base_url('assets/lp') ?>/images/icon/medal.svg" style="width: 75px;display:block;" class="img-fluid mb-3 mx-auto">
+					<h3>Kelas Koding Advanced</h3>
+					<p>Belajar lebih dalam, kompleks, dan komprehensif terkait kelas yang sudah di ambil sebelumnya
+						di kelas Intermediate.</p>
 				</div>
 			</div>
 		</div>
-	</aside>
-	<!-- professionals block -->
-	<section class="container professionals-block">
-		<header class="block-header">
-			<h2 class="block-header-heading">Instruktur Kami</h2>
-			<p>Kami memiliki instruktur yang paham dan mampu mengajar di bidangnya.</p>
-		</header>
-		<div class="row">
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<!-- pro column -->
-				<article class="pro-column over text-center">
-					<div class="aligncenter">
-						<a href="instructor-single.html"><img src="http://placehold.it/	262x210" alt="Steaven Maseri Designer"></a>
-						<div class="caption">
-							<ul class="socail-networks list-unstyled">
-								<li><a href="#" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-								<li><a href="#" class="twitter"><span class="fab fa-twitter"></span></a></li>
-								<li><a href="#" class="google"><span class="fab fa-google-plus-g"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<h3 class="fw-normal text-capitalize"><a href="instructor-single.html">Steaven Maseri</a></h3>
-					<h4 class="fw-normal text-capitalize">Designer</h4>
-					<p>Fundamental parts of medi cal research include cellular and mol lecular biology.</p>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<!-- pro column -->
-				<article class="pro-column over text-center">
-					<div class="aligncenter">
-						<a href="instructor-single.html"><img src="http://placehold.it/	262x210" alt="Jackson James Designer"></a>
-						<div class="caption">
-							<ul class="socail-networks list-unstyled">
-								<li><a href="#" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-								<li><a href="#" class="twitter"><span class="fab fa-twitter"></span></a></li>
-								<li><a href="#" class="google"><span class="fab fa-google-plus-g"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<h3 class="fw-normal text-capitalize"><a href="instructor-single.html">Jackson James</a></h3>
-					<h4 class="fw-normal text-capitalize">Designer</h4>
-					<p>Fundamental parts of medi cal research include cellular and mol lecular biology.</p>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<!-- pro column -->
-				<article class="pro-column over text-center">
-					<div class="aligncenter">
-						<a href="instructor-single.html"><img src="http://placehold.it/	262x210" alt="Thorsten Tailor Artist"></a>
-						<div class="caption">
-							<ul class="socail-networks list-unstyled">
-								<li><a href="#" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-								<li><a href="#" class="twitter"><span class="fab fa-twitter"></span></a></li>
-								<li><a href="#" class="google"><span class="fab fa-google-plus-g"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<h3 class="fw-normal text-capitalize"><a href="instructor-single.html">Thorsten Tailor</a></h3>
-					<h4 class="fw-normal text-capitalize">Artist</h4>
-					<p>Fundamental parts of medi cal research include cellular and mol lecular biology.</p>
-				</article>
-			</div>
-			<div class="col-xs-12 col-sm-6 col-md-3">
-				<!-- pro column -->
-				<article class="pro-column over text-center">
-					<div class="aligncenter">
-						<a href="instructor-single.html"><img src="http://placehold.it/	262x210" alt="Katrine Fonsmark Literature"></a>
-						<div class="caption">
-							<ul class="socail-networks list-unstyled">
-								<li><a href="#" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
-								<li><a href="#" class="twitter"><span class="fab fa-twitter"></span></a></li>
-								<li><a href="#" class="google"><span class="fab fa-google-plus-g"></span></a></li>
-							</ul>
-						</div>
-					</div>
-					<h3 class="fw-normal text-capitalize"><a href="instructor-single.html">Katrine Fonsmark</a></h3>
-					<h4 class="fw-normal text-capitalize">Literature</h4>
-					<p>Fundamental parts of medi cal research include cellular and mol lecular biology.</p>
-				</article>
-			</div>
-		</div>
-	</section>
-	<!-- testimonials block -->
-	<section class="testimonials-block text-center bg-cover" style="background-image: url(http://placehold.it/1920x461);">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-10 col-sm-offset-1">
-					<h2 class="text-white">Testimoni</h2>
-					<!-- testimonail slider -->
-					<div class="slick-slider slider testimonail-slider">
-						<div>
-							<!-- testimonial quote -->
-							<blockquote class="testimonial-quote font-serif text-white">
-								<p>“ Trent from punchy rollie grab us a waggin school. Flat out like a bludger where he hasn't got a damper. As stands out like brass razoo heaps it'll be relo. As busy as a paddock.”</p>
-								<cite class="element-block font-lato">
-									<span class="avatar rounded-circle element-block">
-										<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
-									</span>
-									<strong class="element-block h5 h text-yellow">Nethor Doct <span class="text-white">- Developer</span></strong>
-								</cite>
-							</blockquote>
-						</div>
-						<div>
-							<!-- testimonial quote -->
-							<blockquote class="testimonial-quote font-serif text-white">
-								<p>“ Trent from punchy rollie grab us a waggin school. Flat out like a bludger where he hasn't got a damper. As stands out like brass razoo heaps it'll be relo. As busy as a paddock.”</p>
-								<cite class="element-block font-lato">
-									<span class="avatar rounded-circle element-block">
-										<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
-									</span>
-									<strong class="element-block h5 h text-yellow">Nethor Doct <span class="text-white">- Developer</span></strong>
-								</cite>
-							</blockquote>
-						</div>
-						<div>
-							<!-- testimonial quote -->
-							<blockquote class="testimonial-quote font-serif text-white">
-								<p>“ Trent from punchy rollie grab us a waggin school. Flat out like a bludger where he hasn't got a damper. As stands out like brass razoo heaps it'll be relo. As busy as a paddock.”</p>
-								<cite class="element-block font-lato">
-									<span class="avatar rounded-circle element-block">
-										<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
-									</span>
-									<strong class="element-block h5 h text-yellow">Nethor Doct <span class="text-white">- Developer</span></strong>
-								</cite>
-							</blockquote>
-						</div>
-						<div>
-							<!-- testimonial quote -->
-							<blockquote class="testimonial-quote font-serif text-white">
-								<p>“ Trent from punchy rollie grab us a waggin school. Flat out like a bludger where he hasn't got a damper. As stands out like brass razoo heaps it'll be relo. As busy as a paddock.”</p>
-								<cite class="element-block font-lato">
-									<span class="avatar rounded-circle element-block">
-										<img class="rounded-circle" src="http://placehold.it/65x65" alt="Nethor Doct -Developer">
-									</span>
-									<strong class="element-block h5 h text-yellow">Nethor Doct <span class="text-white">- Developer</span></strong>
-								</cite>
-							</blockquote>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	</div>
+</div>
 
-	<!-- subscription aside block -->
-	<aside class="subscription-aside-block bg-gray">
-		<!-- newsletter sub form -->
-		<form action="#" class="container newsletter-sub-form">
-			<div class="row form-holder">
-				<div class="col-xs-12 col-sm-6 col">
-					<div class="text-wrap">
-						<span class="element-block icn no-shrink rounded-circle bg-theme text-white"><i class="far fa-envelope-open"><span class="sr-only">icn</span></i></span>
-						<div class="inner-wrap">
-							<label for="email" class="text-dark">Signup for Newsletter</label>
-							<p>Subscribe now and receive weekly newsletter with new updates.</p>
-						</div>
+<div class="untree_co-section pt-0 bg-img overlay" style="background-image: url('<?= base_url('assets/lp') ?>/images/hero_bg_2.jpg');">
+	<div class="container">
+		<div class="row align-items-center justify-content-center text-center">
+			<div class="col-lg-10">
+				<h2 class="text-white mb-3" data-aos="fade-up" data-aos-delay="0">“Pendidikan adalah senjata paling
+					mematikan di dunia, karena dengan pendidikan, Anda dapat mengubah dunia”
+				</h2>
+				<p class="text-white font-italic h5 mb-4" data-aos="fade-up" data-aos-delay="100">Nelson Mandela</p>
+				<p><a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">Pelajari Sekarang</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="untree_co-section" id="tentang-kami">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-5 mb-5">
+				<h2 class="line-bottom mb-4" data-aos="fade-up" data-aos-delay="0">Tentang Kami</h2>
+				<p data-aos="fade-up" data-aos-delay="100">Halo, nama saya Fathul Muiin. Orang - orang biasa
+					memanggil saya Kak Muiin.
+					Saya memiliki ketertarikan terhadap dunia pendidikan di Indonesia, itulah alasan saya membuat
+					course ini.
+					Saya memiliki pengalaman dalam mengajar, dan saya akan berusaha memberikan yang terbaik dalam
+					perkembangan
+					pemahaman anak Anda.
+				</p>
+				<ul class="ul-check mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+					<li>Kompeten Dalam Mengajar</li>
+					<li>Kompeten Di Bidangnya</li>
+					<li>Berusaha Memberikan Yang Terbaik</li>
+				</ul>
+				<div class="row count-numbers mb-5">
+					<div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+						<span class="counter d-block"><span data-number="70">0</span><span>+</span></span>
+						<span class="caption-2">Happy Students</span>
+					</div>
+					<div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+						<span class="counter d-block"><span data-number="50">0</span><span>+</span></span>
+						<span class="caption-2">Satisfied Parents</span>
+					</div>
+					<div class="col-4 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+						<span class="counter d-block"><span data-number="8">0</span><span>+</span></span>
+						<span class="caption-2">Projects</span>
 					</div>
 				</div>
-				<div class="col-xs-12 col-sm-6 col">
-					<div class="input-group">
-						<input type="email" id="email" class="form-control" placeholder="Enter your email&hellip;">
-						<span class="input-group-btn">
-							<button class="btn btn-dark text-uppercase" type="button">Submit</button>
-						</span>
+				<p data-aos="fade-up" data-aos-delay="200">
+				<div class="row">
+					<div class="col-6">
+						<a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-primary btn-sm">Pelajari Sekarang</a>
+					</div>
+					<div class="col-6">
+						<a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-outline-primary btn-sm">Informasi Lebih Lanjut</a>
+					</div>
+				</div>
+				</p>
+			</div>
+			<div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+				<div class="bg-1"></div>
+				<img src="<?= base_url('assets/lp') ?>/images/muiin.jpg" alt="Image" class="img-fluid rounded">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="untree_co-section" id="harga">
+	<div class="container">
+		<div class="row justify-content-center mb-5">
+			<div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+				<h2 class="line-bottom text-center mb-4">Harga</h2>
+				<p>Kami menawarkan harga dan paket yang bersaing dan berkualitas, memastikan bahwa anak Anda akan
+					selalu mendapatkan pembelajaran yang terbaik.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="00">
+				<div class="pricing">
+					<div class="pricing-img mb-4"><img src="<?= base_url('assets/lp') ?>/images/1x/asset-1.png" alt="Image" class="img-fluid">
+					</div>
+					<div class="pricing-body">
+						<h3 class="pricing-plan">Beginner</h3>
+						<p class="mb-4">Kenalkan anak Anda dengan logika, algoritma, programming, dan asah
+							kreatifitas mereka dengan pembelajaran yang menyenangkan.</p>
+						<div class="price"><span class="fig">Rp 350.000</span><span>/bulan</span></div>
+						<p><a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-primary">Daftar Sekarang</a></p>
 					</div>
 				</div>
 			</div>
-		</form>
-	</aside>
-</main>
+			<div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+				<div class="pricing">
+					<div class="pricing-img mb-4"><img src="<?= base_url('assets/lp') ?>/images/1x/asset-2.png" alt="Image" class="img-fluid">
+					</div>
+					<div class="pricing-body">
+						<h3 class="pricing-plan">Intermediate</h3>
+						<p class="mb-4">Berikan bekal masa depan untuk anak Anda, dengan mengikuti kelas lanjutan
+							yang terstruktur dan spesifik.</p>
+						<div class="price"><span class="fig">Rp 500.000</span><span>/bulan</span></div>
+						<p><a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-primary">Daftar Sekarang</a></p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+				<div class="pricing">
+					<div class="pricing-img mb-4"><img src="<?= base_url('assets/lp') ?>/images/1x/asset-3.png" alt="Image" class="img-fluid">
+					</div>
+					<div class="pricing-body">
+						<h3 class="pricing-plan">Advanced</h3>
+						<p class="mb-4">Kelas terbaik untuk menyelesaikan pemahaman programming anak Anda, dengan
+							studi kasus proyek nyata di dunia teknologi.</p>
+						<div class="price"><span class="fig">Rp 800.000</span><span>/bulan</span></div>
+						<p><a href="https://api.whatsapp.com/send?phone=+6289679590971&text=Hello%20Kak%20Muiin,%20saya%20ingin%20tanya%20Programnya" class="btn btn-primary">Daftar Sekarang</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="untree_co-section" id="testimoni">
+	<div class="bg-2"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+				<h3 class="line-bottom mb-4">Testimoni</h3>
+				<div class="owl-carousel wide-slider-testimonial">
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;ka Muiin itu Orangnya friendly bgt, metodenya ngajarnya ter-struktur,
+								jd sbgai muridnya gampang memahami apa yg beliau jelaskan..&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Nurani</h3>
+							</div>
+						</blockquote>
+					</div>
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;Fathul adalah orang yang menyenangkan dan berkepribadian baik. Dia dapat
+								menyampaikan poin penting dalam
+								bahasa yang sederhana sehingga mudah dipahami oleh anak-anak.&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Jenita Fitri</h3>
+							</div>
+						</blockquote>
+					</div>
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;Benar benar pengajar yang sudah sangat siap untuk mengajar. Materi dan
+								pengalaman sudah sangat dikuasai, pastinya sudah
+								berpengalaman di dunia mengajar.&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Naufal</h3>
+							</div>
+						</blockquote>
+					</div>
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;Seorang fathul sangat energik dan hebat ketika dalam mengajar sehingga anak
+								mudah memahami pelajaran karena gaya
+								pengajaran yang menyenangkan dan tidak monoton. Sangat recommended :).&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Sigit</h3>
+							</div>
+						</blockquote>
+					</div>
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;Kak Fathul ngajarnya enak .. Penjelasannya sederhana, selalu tepat waktu juga
+								dan komunikatif dalam pengajaran. Terima kasih ka.&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Fitria</h3>
+							</div>
+						</blockquote>
+					</div>
+					<div class="item">
+						<blockquote class="block-testimonial">
+							<p>
+								&ldquo;Ka Fathul menjelaskan dengan mudah dan gampang dimengerti, baik dan ramah ke
+								anak anak, dapat mengerti sifat anak2,
+								hebat.&rdquo;</p>
+							<div class="author">
+								<img src="<?= base_url('assets/lp') ?>/images/icon/smile.svg" alt="Free template by TemplateUX">
+								<h3>Amiera</h3>
+							</div>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-7 ml-auto" data-aos="fade-up" data-aos-delay="100" id="alasan">
+				<h3 class="line-bottom mb-4">Kenapa Memilih Kami?</h3>
+				<p>Saya memiliki konsentrasi terhadap dunia pendidikan di Indonesia. Saya percaya, pendidikan bisa
+					merubah hidup menjadi lebih baik.</p>
+				<div class="custom-accordion" id="accordion_1">
+					<div class="accordion-item">
+						<h2 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Kompeten
+								Dalam Mengajar</button>
+						</h2>
+						<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion_1">
+							<div class="accordion-body">
+								<div class="d-flex">
+									<div class="accordion-img mr-4">
+										<img src="<?= base_url('assets/lp') ?>/images/about_1.jpg" alt="Image" class="img-fluid">
+									</div>
+									<div>
+										<p>Berpengalaman dalam dunia pengajaran selama lebih dari 4 tahun.</p>
+										<p>Saya sadar, pembelajaran bukan hanya perihal 'pemahaman' materi. Namun
+											juga 'cara menyampaikan materi' sehingga siswa menjadi paham.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Kompeten Di Bidangnya</button>
+						</h2>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion_1">
+							<div class="accordion-body">
+								<div class="d-flex">
+									<div class="accordion-img mr-4">
+										<img src="<?= base_url('assets/lp') ?>/images/about_2.jpg" alt="Image" class="img-fluid">
+									</div>
+									<div>
+										<p>Lulusan S1, Jurusan Teknik Informatika. Mendalami dunia teknologi
+											informasi lebih dari 4 tahun.</p>
+										<p>Memiliki beberapa proyek nyata yang sudah dibuat, diantaranya: Aplikasi
+											Web Travel, Toko Online, Game, dll.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="accordion-item">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Berusaha Memberikan Yang Terbaik</button>
+						</h2>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion_1">
+							<div class="accordion-body">
+								<div class="d-flex">
+									<div class="accordion-img mr-4">
+										<img src="<?= base_url('assets/lp') ?>/images/about_1.jpg" alt="Image" class="img-fluid">
+									</div>
+									<div>
+										<p>Kami akan selalu berusaha memberikan yang terbaik untuk anak Anda.</p>
+										<p>Kami sangat terbuka dan menerima kritik/ masukkan yang membangun,
+											sehingga kami bisa memberikan yang lebih baik lagi untuk Anak anda.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

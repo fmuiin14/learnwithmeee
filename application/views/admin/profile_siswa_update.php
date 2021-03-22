@@ -33,7 +33,7 @@
 
                                     <div class="form-group">
                                         <label>NIS</label>
-                                        <input type="number" name="nis" value="<?= $user->nis ?>" class="form-control">
+                                        <input type="number" disabled name="nis" value="<?= $user->nis ?>" class="form-control">
                                         <?= form_error('nis', '<div class="text-small text-danger">', '</div>') ?>
                                     </div>
 
